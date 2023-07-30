@@ -3078,6 +3078,69 @@ Delete a taxonomy
 This class is used to interact with the timeline API
 
 **Kind**: global class  
+
+* [Timeline](#Timeline)
+    * [.get(id)](#Timeline+get) ⇒ <code>Promise</code>
+    * [.createEvent(id, date, endDate, title, description)](#Timeline+createEvent) ⇒ <code>Promise</code>
+    * [.deleteEvent(id)](#Timeline+deleteEvent) ⇒ <code>Promise</code>
+    * [.updateEvent(id, date, endDate, title, description)](#Timeline+updateEvent) ⇒ <code>Promise</code>
+
+<a name="Timeline+get"></a>
+
+### timeline.get(id) ⇒ <code>Promise</code>
+Get case timeline by id
+
+**Kind**: instance method of [<code>Timeline</code>](#Timeline)  
+**Returns**: <code>Promise</code> - A promise that contains the timeline  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the case |
+
+<a name="Timeline+createEvent"></a>
+
+### timeline.createEvent(id, date, endDate, title, description) ⇒ <code>Promise</code>
+Create a custom event
+
+**Kind**: instance method of [<code>Timeline</code>](#Timeline)  
+**Returns**: <code>Promise</code> - A promise that contains the created event  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the case |
+| date | <code>string</code> |  | The date of the event |
+| endDate | <code>string</code> | <code>null</code> | The end date of the event |
+| title | <code>string</code> |  | The title of the event |
+| description | <code>string</code> |  | The description of the event |
+
+<a name="Timeline+deleteEvent"></a>
+
+### timeline.deleteEvent(id) ⇒ <code>Promise</code>
+Delete a custom event
+
+**Kind**: instance method of [<code>Timeline</code>](#Timeline)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted event  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the event |
+
+<a name="Timeline+updateEvent"></a>
+
+### timeline.updateEvent(id, date, endDate, title, description) ⇒ <code>Promise</code>
+Update a custom event
+
+**Kind**: instance method of [<code>Timeline</code>](#Timeline)  
+**Returns**: <code>Promise</code> - A promise that contains the updated event  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the event |
+| date | <code>string</code> | <code>null</code> | The date of the event |
+| endDate | <code>string</code> | <code>null</code> | The end date of the event |
+| title | <code>string</code> | <code>null</code> | The title of the event |
+| description | <code>string</code> | <code>null</code> | The description of the event |
+
 <a name="TOTP"></a>
 
 ## TOTP
