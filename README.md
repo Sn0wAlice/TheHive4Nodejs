@@ -15,6 +15,9 @@ Nodejs module to interact with your TheHive5 instance
 <dt><a href="#Case">Case</a></dt>
 <dd><p>This class is used to interact with the case API</p>
 </dd>
+<dt><a href="#Task">Task</a></dt>
+<dd><p>This class is used to interact with the Task API</p>
+</dd>
 </dl>
 
 ## Functions
@@ -651,6 +654,190 @@ get the shares of a case
 | Param | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | The id of the case |
+
+<a name="Task"></a>
+
+## Task
+This class is used to interact with the Task API
+
+**Kind**: global class  
+
+* [Task](#Task)
+    * [.createTaskInCase(caseId, title, group, description, status, flag, startDate, endDate, order, dueDate, assignee, mandatory)](#Task+createTaskInCase) ⇒ <code>Promise</code>
+    * [.getTask(taskId)](#Task+getTask) ⇒ <code>Promise</code>
+    * [.deleteTask(taskId)](#Task+deleteTask) ⇒ <code>Promise</code>
+    * [.updateTask(taskId, title, group, description, status, flag, startDate, endDate, order, dueDate, assignee, mandatory)](#Task+updateTask) ⇒ <code>Promise</code>
+    * [.bulkUpdateTask(taskIds, title, group, description, status, flag, startDate, endDate, order, dueDate, assignee, mandatory)](#Task+bulkUpdateTask) ⇒ <code>Promise</code>
+    * [.taskAsctionRequired(taskId)](#Task+taskAsctionRequired) ⇒ <code>Promise</code>
+    * [.setTaskActionRequired(taskId, orgId)](#Task+setTaskActionRequired)
+    * [.setTaskActionDone(taskId, orgId)](#Task+setTaskActionDone)
+    * [.listSharesOfTask(taskId)](#Task+listSharesOfTask)
+    * [.shareTask(taskId, orgId)](#Task+shareTask)
+    * [.unshareTask(taskId, orgId)](#Task+unshareTask)
+
+<a name="Task+createTaskInCase"></a>
+
+### task.createTaskInCase(caseId, title, group, description, status, flag, startDate, endDate, order, dueDate, assignee, mandatory) ⇒ <code>Promise</code>
+Create a new task in a case
+
+**Kind**: instance method of [<code>Task</code>](#Task)  
+**Returns**: <code>Promise</code> - - A promise that will resolve with the response body  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| caseId | <code>string</code> |  | The case ID |
+| title | <code>string</code> |  | The title of the task |
+| group | <code>string</code> | <code>null</code> | The group of the task |
+| description | <code>string</code> | <code>null</code> | The description of the task |
+| status | <code>string</code> | <code>null</code> | The status of the task |
+| flag | <code>boolean</code> | <code></code> | The flag of the task |
+| startDate | <code>string</code> | <code>null</code> | The start date of the task |
+| endDate | <code>string</code> | <code>null</code> | The end date of the task |
+| order | <code>number</code> | <code></code> | The order of the task |
+| dueDate | <code>string</code> | <code>null</code> | The due date of the task |
+| assignee | <code>string</code> | <code>null</code> | The assignee of the task |
+| mandatory | <code>boolean</code> | <code></code> | The mandatory of the task |
+
+<a name="Task+getTask"></a>
+
+### task.getTask(taskId) ⇒ <code>Promise</code>
+Get a task
+
+**Kind**: instance method of [<code>Task</code>](#Task)  
+**Returns**: <code>Promise</code> - - A promise that will resolve with the response body  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| taskId | <code>string</code> | The task ID |
+
+<a name="Task+deleteTask"></a>
+
+### task.deleteTask(taskId) ⇒ <code>Promise</code>
+Delete a task
+
+**Kind**: instance method of [<code>Task</code>](#Task)  
+**Returns**: <code>Promise</code> - - A promise that will resolve with the response body  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| taskId | <code>string</code> | The task ID |
+
+<a name="Task+updateTask"></a>
+
+### task.updateTask(taskId, title, group, description, status, flag, startDate, endDate, order, dueDate, assignee, mandatory) ⇒ <code>Promise</code>
+Update a task
+
+**Kind**: instance method of [<code>Task</code>](#Task)  
+**Returns**: <code>Promise</code> - - A promise that will resolve with the response body  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| taskId | <code>string</code> |  | The task ID |
+| title | <code>string</code> | <code>null</code> | The title of the task |
+| group | <code>string</code> | <code>null</code> | The group of the task |
+| description | <code>string</code> | <code>null</code> | The description of the task |
+| status | <code>string</code> | <code>null</code> | The status of the task |
+| flag | <code>boolean</code> | <code></code> | The flag of the task |
+| startDate | <code>string</code> | <code>null</code> | The start date of the task |
+| endDate | <code>string</code> | <code>null</code> | The end date of the task |
+| order | <code>number</code> | <code></code> | The order of the task |
+| dueDate | <code>string</code> | <code>null</code> | The due date of the task |
+| assignee | <code>string</code> | <code>null</code> | The assignee of the task |
+| mandatory | <code>boolean</code> | <code></code> | The mandatory of the task |
+
+<a name="Task+bulkUpdateTask"></a>
+
+### task.bulkUpdateTask(taskIds, title, group, description, status, flag, startDate, endDate, order, dueDate, assignee, mandatory) ⇒ <code>Promise</code>
+Bulk update tasks
+
+**Kind**: instance method of [<code>Task</code>](#Task)  
+**Returns**: <code>Promise</code> - - A promise that will resolve with the response body  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| taskIds | <code>Array.&lt;string&gt;</code> |  | The task IDs |
+| title | <code>string</code> | <code>null</code> | The title of the task |
+| group | <code>string</code> | <code>null</code> | The group of the task |
+| description | <code>string</code> | <code>null</code> | The description of the task |
+| status | <code>string</code> | <code>null</code> | The status of the task |
+| flag | <code>boolean</code> | <code></code> | The flag of the task |
+| startDate | <code>string</code> | <code>null</code> | The start date of the task |
+| endDate | <code>string</code> | <code>null</code> | The end date of the task |
+| order | <code>number</code> | <code></code> | The order of the task |
+| dueDate | <code>string</code> | <code>null</code> | The due date of the task |
+| assignee | <code>string</code> | <code>null</code> | The assignee of the task |
+| mandatory | <code>boolean</code> | <code></code> | The mandatory of the task |
+
+<a name="Task+taskAsctionRequired"></a>
+
+### task.taskAsctionRequired(taskId) ⇒ <code>Promise</code>
+Get the action required for a task
+
+**Kind**: instance method of [<code>Task</code>](#Task)  
+**Returns**: <code>Promise</code> - - A promise that will resolve with the response body  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| taskId | <code>string</code> | The task ID |
+
+<a name="Task+setTaskActionRequired"></a>
+
+### task.setTaskActionRequired(taskId, orgId)
+Set task action required
+
+**Kind**: instance method of [<code>Task</code>](#Task)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| taskId | <code>string</code> | The task ID |
+| orgId | <code>string</code> | The org ID |
+
+<a name="Task+setTaskActionDone"></a>
+
+### task.setTaskActionDone(taskId, orgId)
+Set task action as done
+
+**Kind**: instance method of [<code>Task</code>](#Task)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| taskId | <code>string</code> | The task ID |
+| orgId | <code>string</code> | The org ID |
+
+<a name="Task+listSharesOfTask"></a>
+
+### task.listSharesOfTask(taskId)
+List shares of task
+
+**Kind**: instance method of [<code>Task</code>](#Task)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| taskId | <code>string</code> | The task ID |
+
+<a name="Task+shareTask"></a>
+
+### task.shareTask(taskId, orgId)
+Share task
+
+**Kind**: instance method of [<code>Task</code>](#Task)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| taskId | <code>string</code> | The task ID |
+| orgId | <code>string</code> | The org ID |
+
+<a name="Task+unshareTask"></a>
+
+### task.unshareTask(taskId, orgId)
+Unshare task
+
+**Kind**: instance method of [<code>Task</code>](#Task)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| taskId | <code>string</code> | The task ID |
+| orgId | <code>string</code> | The org ID |
 
 <a name="query"></a>
 
