@@ -127,6 +127,150 @@ Nodejs module to interact with your TheHive5 instance
 This class is used to interact with the Admin API
 
 **Kind**: global class  
+
+* [Admin](#Admin)
+    * [.updateLogsLevel(packageName, level)](#Admin+updateLogsLevel) ⇒ <code>Promise</code>
+    * [.triggerChecks()](#Admin+triggerChecks) ⇒ <code>Promise</code>
+    * [.triggerCheck(name)](#Admin+triggerCheck) ⇒ <code>Promise</code>
+    * [.triggerCheckGlobal(name)](#Admin+triggerCheckGlobal) ⇒ <code>Promise</code>
+    * [.triggerCheckDedup(name)](#Admin+triggerCheckDedup) ⇒ <code>Promise</code>
+    * [.triggerCheckCancel()](#Admin+triggerCheckCancel) ⇒ <code>Promise</code>
+    * [.getCheckStats()](#Admin+getCheckStats) ⇒ <code>Promise</code>
+    * [.getIndexStatus()](#Admin+getIndexStatus) ⇒ <code>Promise</code>
+    * [.reindexData(name)](#Admin+reindexData) ⇒ <code>Promise</code>
+    * [.rebuildIndex(name)](#Admin+rebuildIndex) ⇒ <code>Promise</code>
+    * [.repairSchema(name, select, filter)](#Admin+repairSchema) ⇒ <code>Promise</code>
+    * [.schemainfos(name, select, filter)](#Admin+schemainfos) ⇒ <code>Promise</code>
+
+<a name="Admin+updateLogsLevel"></a>
+
+### admin.updateLogsLevel(packageName, level) ⇒ <code>Promise</code>
+Update logs level
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| packageName | <code>string</code> | The name of the package to update |
+| level | <code>string</code> | The level to set |
+
+<a name="Admin+triggerChecks"></a>
+
+### admin.triggerChecks() ⇒ <code>Promise</code>
+Trigger all checks
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="Admin+triggerCheck"></a>
+
+### admin.triggerCheck(name) ⇒ <code>Promise</code>
+Trigger integrity check
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name of check to trigger |
+
+<a name="Admin+triggerCheckGlobal"></a>
+
+### admin.triggerCheckGlobal(name) ⇒ <code>Promise</code>
+Trigger integrity check global
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name of check to trigger |
+
+<a name="Admin+triggerCheckDedup"></a>
+
+### admin.triggerCheckDedup(name) ⇒ <code>Promise</code>
+Trigger integrity check dedup
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name of check to trigger |
+
+<a name="Admin+triggerCheckCancel"></a>
+
+### admin.triggerCheckCancel() ⇒ <code>Promise</code>
+Trigger integrity check cancel
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="Admin+getCheckStats"></a>
+
+### admin.getCheckStats() ⇒ <code>Promise</code>
+Get check stats
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="Admin+getIndexStatus"></a>
+
+### admin.getIndexStatus() ⇒ <code>Promise</code>
+Get Index status
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="Admin+reindexData"></a>
+
+### admin.reindexData(name) ⇒ <code>Promise</code>
+Reindex data
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name of the index to reindex |
+
+<a name="Admin+rebuildIndex"></a>
+
+### admin.rebuildIndex(name) ⇒ <code>Promise</code>
+Rebuild index
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name of the index to rebuild |
+
+<a name="Admin+repairSchema"></a>
+
+### admin.repairSchema(name, select, filter) ⇒ <code>Promise</code>
+Repair schema
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name of the index to repair |
+| select | <code>string</code> | The select to use |
+| filter | <code>string</code> | The filter to use |
+
+<a name="Admin+schemainfos"></a>
+
+### admin.schemainfos(name, select, filter) ⇒ <code>Promise</code>
+Schema info
+
+**Kind**: instance method of [<code>Admin</code>](#Admin)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name of the index to repair |
+| select | <code>string</code> | The select to use |
+| filter | <code>string</code> | The filter to use |
+
 <a name="Alert"></a>
 
 ## Alert
