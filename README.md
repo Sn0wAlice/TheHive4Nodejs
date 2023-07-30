@@ -2384,6 +2384,91 @@ Unshare task
 This class is used to interact with the Taxonomy API
 
 **Kind**: global class  
+
+* [Taxonomy](#Taxonomy)
+    * [.create(namespace, description, version, exclusive, predicate, values)](#Taxonomy+create)
+    * [.import(file)](#Taxonomy+import) ⇒ <code>object</code>
+    * [.activate(id)](#Taxonomy+activate) ⇒ <code>object</code>
+    * [.deactivate(id)](#Taxonomy+deactivate) ⇒ <code>object</code>
+    * [.get(id)](#Taxonomy+get) ⇒ <code>object</code>
+    * [.delete(id)](#Taxonomy+delete) ⇒ <code>object</code>
+
+<a name="Taxonomy+create"></a>
+
+### taxonomy.create(namespace, description, version, exclusive, predicate, values)
+Create a new Taxonomy
+
+**Kind**: instance method of [<code>Taxonomy</code>](#Taxonomy)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| namespace | <code>string</code> | The namespace of the taxonomy |
+| description | <code>string</code> | The description of the taxonomy |
+| version | <code>string</code> | The version of the taxonomy |
+| exclusive | <code>string</code> | Whether the taxonomy is exclusive or not |
+| predicate | <code>string</code> | The predicate of the taxonomy |
+| values | <code>string</code> | The color of the taxonomy |
+
+<a name="Taxonomy+import"></a>
+
+### taxonomy.import(file) ⇒ <code>object</code>
+Import taxonomy from a zip file
+
+**Kind**: instance method of [<code>Taxonomy</code>](#Taxonomy)  
+**Returns**: <code>object</code> - The response  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| file | <code>string</code> | The zip file |
+
+<a name="Taxonomy+activate"></a>
+
+### taxonomy.activate(id) ⇒ <code>object</code>
+Activate a taxonomy
+
+**Kind**: instance method of [<code>Taxonomy</code>](#Taxonomy)  
+**Returns**: <code>object</code> - The response  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the taxonomy |
+
+<a name="Taxonomy+deactivate"></a>
+
+### taxonomy.deactivate(id) ⇒ <code>object</code>
+Deactivate a taxonomy
+
+**Kind**: instance method of [<code>Taxonomy</code>](#Taxonomy)  
+**Returns**: <code>object</code> - The response  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the taxonomy |
+
+<a name="Taxonomy+get"></a>
+
+### taxonomy.get(id) ⇒ <code>object</code>
+Get a taxonomy
+
+**Kind**: instance method of [<code>Taxonomy</code>](#Taxonomy)  
+**Returns**: <code>object</code> - The response  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the taxonomy |
+
+<a name="Taxonomy+delete"></a>
+
+### taxonomy.delete(id) ⇒ <code>object</code>
+Delete a taxonomy
+
+**Kind**: instance method of [<code>Taxonomy</code>](#Taxonomy)  
+**Returns**: <code>object</code> - The response  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the taxonomy |
+
 <a name="Timeline"></a>
 
 ## Timeline
