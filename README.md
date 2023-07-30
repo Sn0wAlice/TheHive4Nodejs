@@ -2009,6 +2009,55 @@ Update a page in a case
 This class is used to interact with the PageTemplate API
 
 **Kind**: global class  
+
+* [PageTemplate](#PageTemplate)
+    * [.createPageTemplate(title, content, order, category)](#PageTemplate+createPageTemplate) ⇒ <code>Promise</code>
+    * [.deletePageTemplateById(id)](#PageTemplate+deletePageTemplateById) ⇒ <code>Promise</code>
+    * [.updatePageTemplateById(id, title, content, order, category)](#PageTemplate+updatePageTemplateById) ⇒ <code>Promise</code>
+
+<a name="PageTemplate+createPageTemplate"></a>
+
+### pageTemplate.createPageTemplate(title, content, order, category) ⇒ <code>Promise</code>
+Create page template
+
+**Kind**: instance method of [<code>PageTemplate</code>](#PageTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| title | <code>string</code> | The title of the page template |
+| content | <code>string</code> | The content of the page template |
+| order | <code>string</code> | The order of the page template |
+| category | <code>string</code> | The category of the page template |
+
+<a name="PageTemplate+deletePageTemplateById"></a>
+
+### pageTemplate.deletePageTemplateById(id) ⇒ <code>Promise</code>
+delete page template by id
+
+**Kind**: instance method of [<code>PageTemplate</code>](#PageTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the page template |
+
+<a name="PageTemplate+updatePageTemplateById"></a>
+
+### pageTemplate.updatePageTemplateById(id, title, content, order, category) ⇒ <code>Promise</code>
+Update page template by id
+
+**Kind**: instance method of [<code>PageTemplate</code>](#PageTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the page template |
+| title | <code>string</code> | The title of the page template |
+| content | <code>string</code> | The content of the page template |
+| order | <code>string</code> | The order of the page template |
+| category | <code>string</code> | The category of the page template |
+
 <a name="Profile"></a>
 
 ## Profile
