@@ -1201,6 +1201,55 @@ Download attachment of case report template
 This class is used to interact with the casestatus API
 
 **Kind**: global class  
+
+* [Casestatus](#Casestatus)
+    * [.create(value, stage, order, description, colour)](#Casestatus+create) ⇒ <code>Promise</code>
+    * [.delete(id)](#Casestatus+delete) ⇒ <code>Promise</code>
+    * [.update(id, order, description, colour)](#Casestatus+update) ⇒ <code>Promise</code>
+
+<a name="Casestatus+create"></a>
+
+### casestatus.create(value, stage, order, description, colour) ⇒ <code>Promise</code>
+Create a new casestatus
+
+**Kind**: instance method of [<code>Casestatus</code>](#Casestatus)  
+**Returns**: <code>Promise</code> - A promise that contains the created casestatus  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| value | <code>string</code> |  | The value of the casestatus |
+| stage | <code>string</code> |  | The stage of the casestatus |
+| order | <code>string</code> | <code>0</code> | The order of the casestatus |
+| description | <code>string</code> | <code>null</code> | The description of the casestatus |
+| colour | <code>string</code> | <code>&quot;#F1A5E7&quot;</code> | The color of the casestatus |
+
+<a name="Casestatus+delete"></a>
+
+### casestatus.delete(id) ⇒ <code>Promise</code>
+Delete a casestatus
+
+**Kind**: instance method of [<code>Casestatus</code>](#Casestatus)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted casestatus  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the casestatus |
+
+<a name="Casestatus+update"></a>
+
+### casestatus.update(id, order, description, colour) ⇒ <code>Promise</code>
+Update a casestatus
+
+**Kind**: instance method of [<code>Casestatus</code>](#Casestatus)  
+**Returns**: <code>Promise</code> - A promise that contains the updated casestatus  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the casestatus |
+| order | <code>string</code> | <code>null</code> | The order to update |
+| description | <code>string</code> | <code>null</code> | The new value of the parameter |
+| colour | <code>string</code> | <code>null</code> | The new value of the parameter |
+
 <a name="CaseTemplate"></a>
 
 ## CaseTemplate
