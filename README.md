@@ -1486,6 +1486,52 @@ Get current password policy
 This class is used to interact with the MISP API
 
 **Kind**: global class  
+
+* [MISP](#MISP)
+    * [.getMISPStatus()](#MISP+getMISPStatus) ⇒ <code>Promise</code>
+    * [.syncWithMISP()](#MISP+syncWithMISP) ⇒ <code>Promise</code>
+    * [.exportCaseToMISP(caseid, mispName)](#MISP+exportCaseToMISP)
+    * [.importCaseFromMISP(_json, file)](#MISP+importCaseFromMISP) ⇒ <code>Promise</code>
+
+<a name="MISP+getMISPStatus"></a>
+
+### misP.getMISPStatus() ⇒ <code>Promise</code>
+Get MISP status
+
+**Kind**: instance method of [<code>MISP</code>](#MISP)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="MISP+syncWithMISP"></a>
+
+### misP.syncWithMISP() ⇒ <code>Promise</code>
+Sync with MISP server
+
+**Kind**: instance method of [<code>MISP</code>](#MISP)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="MISP+exportCaseToMISP"></a>
+
+### misP.exportCaseToMISP(caseid, mispName)
+Export case to MISP
+
+**Kind**: instance method of [<code>MISP</code>](#MISP)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| caseid | <code>string</code> | The case id of the case |
+| mispName | <code>string</code> | The name of the MISP server |
+
+<a name="MISP+importCaseFromMISP"></a>
+
+### misP.importCaseFromMISP(_json, file) ⇒ <code>Promise</code>
+Import case from MISP
+
+**Kind**: instance method of [<code>MISP</code>](#MISP)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| _json | <code>string</code> | The json of the MISP event |
+| file | <code>string</code> | The file of the MISP event |
+
 <a name="Observable"></a>
 
 ## Observable
