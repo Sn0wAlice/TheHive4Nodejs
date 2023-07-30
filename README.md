@@ -1166,6 +1166,25 @@ This class is used to interact with the share API
 This class is used to interact with the Status API
 
 **Kind**: global class  
+
+* [Status](#Status)
+    * [.getPlatformPublicStatus()](#Status+getPlatformPublicStatus) ⇒ <code>Promise</code>
+    * [.getPlatformStatus()](#Status+getPlatformStatus) ⇒ <code>Promise</code>
+
+<a name="Status+getPlatformPublicStatus"></a>
+
+### status.getPlatformPublicStatus() ⇒ <code>Promise</code>
+Get platform public status
+
+**Kind**: instance method of [<code>Status</code>](#Status)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="Status+getPlatformStatus"></a>
+
+### status.getPlatformStatus() ⇒ <code>Promise</code>
+Get platform status
+
+**Kind**: instance method of [<code>Status</code>](#Status)  
+**Returns**: <code>Promise</code> - The response of the request  
 <a name="TaskLog"></a>
 
 ## TaskLog
