@@ -1516,6 +1516,64 @@ Link pages template to case template
 This class is used to interact with the comment API
 
 **Kind**: global class  
+
+* [Comment](#Comment)
+    * [.create(caseId, message)](#Comment+create) ⇒ <code>Promise</code>
+    * [.create(alertid, message)](#Comment+create) ⇒ <code>Promise</code>
+    * [.delete(id)](#Comment+delete) ⇒ <code>Promise</code>
+    * [.update(id, message)](#Comment+update) ⇒ <code>Promise</code>
+
+<a name="Comment+create"></a>
+
+### comment.create(caseId, message) ⇒ <code>Promise</code>
+Create a new comment in a case
+
+**Kind**: instance method of [<code>Comment</code>](#Comment)  
+**Returns**: <code>Promise</code> - A promise that contains the created comment  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| caseId | <code>string</code> | The id of the case |
+| message | <code>string</code> | The message of the comment |
+
+<a name="Comment+create"></a>
+
+### comment.create(alertid, message) ⇒ <code>Promise</code>
+Create a new comment in an alert
+
+**Kind**: instance method of [<code>Comment</code>](#Comment)  
+**Returns**: <code>Promise</code> - A promise that contains the created comment  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| alertid | <code>string</code> | The id of the alert |
+| message | <code>string</code> | The message of the comment |
+
+<a name="Comment+delete"></a>
+
+### comment.delete(id) ⇒ <code>Promise</code>
+Delete comment by id
+
+**Kind**: instance method of [<code>Comment</code>](#Comment)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted comment  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the comment |
+
+<a name="Comment+update"></a>
+
+### comment.update(id, message) ⇒ <code>Promise</code>
+Update comment by id
+
+**Kind**: instance method of [<code>Comment</code>](#Comment)  
+**Returns**: <code>Promise</code> - A promise that contains the updated comment  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the comment |
+| message | <code>string</code> | The message of the comment |
+
 <a name="Cortex"></a>
 
 ## Cortex
