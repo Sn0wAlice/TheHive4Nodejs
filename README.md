@@ -2151,6 +2151,175 @@ Create observable type
 This class is used to interact with the Organisation API
 
 **Kind**: global class  
+
+* [Organisation](#Organisation)
+    * [.addAttachment(attachments, canRename)](#Organisation+addAttachment) ⇒ <code>Promise</code>
+    * [.getAttachment(id)](#Organisation+getAttachment) ⇒ <code>Promise</code>
+    * [.deleteAttachment(id)](#Organisation+deleteAttachment) ⇒ <code>Promise</code>
+    * [.create(name, description, taskRule, observableRule, locked)](#Organisation+create) ⇒ <code>Promise</code>
+    * [.get(id)](#Organisation+get) ⇒ <code>Promise</code>
+    * [.update(id, name, description, taskRule, observableRule, locked, avatar)](#Organisation+update) ⇒ <code>Promise</code>
+    * [.getAvatar(id, fileHash)](#Organisation+getAvatar) ⇒ <code>Promise</code>
+    * [.link(id, organisationId)](#Organisation+link) ⇒ <code>Promise</code>
+    * [.unlink(id, organisationId)](#Organisation+unlink) ⇒ <code>Promise</code>
+    * [.listLink(id)](#Organisation+listLink) ⇒ <code>Promise</code>
+    * [.bulkLink(id, organisationIds)](#Organisation+bulkLink) ⇒ <code>Promise</code>
+    * [.listSharingProfiles()](#Organisation+listSharingProfiles) ⇒ <code>Promise</code>
+
+<a name="Organisation+addAttachment"></a>
+
+### organisation.addAttachment(attachments, canRename) ⇒ <code>Promise</code>
+Add attachment to organisation
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the added attachment  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| attachments | <code>Array.&lt;string&gt;</code> |  | The attachment to add |
+| canRename | <code>boolean</code> | <code>false</code> | The canRename of the attachment |
+
+<a name="Organisation+getAttachment"></a>
+
+### organisation.getAttachment(id) ⇒ <code>Promise</code>
+Get attachment by id
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the attachment  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the attachment |
+
+<a name="Organisation+deleteAttachment"></a>
+
+### organisation.deleteAttachment(id) ⇒ <code>Promise</code>
+Delete attachment by id
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted attachment  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the attachment |
+
+<a name="Organisation+create"></a>
+
+### organisation.create(name, description, taskRule, observableRule, locked) ⇒ <code>Promise</code>
+Create organisation
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the created organisation  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| name | <code>string</code> |  | The name of the organisation |
+| description | <code>string</code> |  | The description of the organisation |
+| taskRule | <code>string</code> | <code>null</code> | The taskRule of the organisation |
+| observableRule | <code>string</code> | <code>null</code> | The observableRule of the organisation |
+| locked | <code>boolean</code> | <code>false</code> | The locked stauts of the organisation |
+
+<a name="Organisation+get"></a>
+
+### organisation.get(id) ⇒ <code>Promise</code>
+Get organisation by id
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the organisation  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the organisation |
+
+<a name="Organisation+update"></a>
+
+### organisation.update(id, name, description, taskRule, observableRule, locked, avatar) ⇒ <code>Promise</code>
+Update organisation by id
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the updated organisation  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the organisation |
+| name | <code>string</code> |  | The name of the organisation |
+| description | <code>string</code> |  | The description of the organisation |
+| taskRule | <code>string</code> | <code>null</code> | The taskRule of the organisation |
+| observableRule | <code>string</code> | <code>null</code> | The observableRule of the organisation |
+| locked | <code>boolean</code> | <code>false</code> | The locked stauts of the organisation |
+| avatar | <code>string</code> | <code>null</code> | The avatar of the organisation |
+
+<a name="Organisation+getAvatar"></a>
+
+### organisation.getAvatar(id, fileHash) ⇒ <code>Promise</code>
+Get organisation avatar by id
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the avatar  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the organisation |
+| fileHash | <code>string</code> | The fileHash of the avatar |
+
+<a name="Organisation+link"></a>
+
+### organisation.link(id, organisationId) ⇒ <code>Promise</code>
+Link organisations
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the linked organisation  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the organisation |
+| organisationId | <code>string</code> | The id of the organisation to link |
+
+<a name="Organisation+unlink"></a>
+
+### organisation.unlink(id, organisationId) ⇒ <code>Promise</code>
+Unlink organisations
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the unlinked organisation  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the organisation |
+| organisationId | <code>string</code> | The id of the organisation to unlink |
+
+<a name="Organisation+listLink"></a>
+
+### organisation.listLink(id) ⇒ <code>Promise</code>
+List organisation link
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the linked organisations  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the organisation |
+
+<a name="Organisation+bulkLink"></a>
+
+### organisation.bulkLink(id, organisationIds) ⇒ <code>Promise</code>
+bulk link organisations
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the linked organisations  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the organisation |
+| organisationIds | <code>Array.&lt;string&gt;</code> | The ids of the organisations to link |
+
+<a name="Organisation+listSharingProfiles"></a>
+
+### organisation.listSharingProfiles() ⇒ <code>Promise</code>
+list sharing profiles
+
+**Kind**: instance method of [<code>Organisation</code>](#Organisation)  
+**Returns**: <code>Promise</code> - A promise that contains the sharing profiles  
 <a name="Page"></a>
 
 ## Page
