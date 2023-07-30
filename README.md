@@ -509,6 +509,55 @@ Delete an alert in bulk
 This class is used to interact with the alertstatus API
 
 **Kind**: global class  
+
+* [Alertstatus](#Alertstatus)
+    * [.create(value, stage, order, description, colour)](#Alertstatus+create) ⇒ <code>Promise</code>
+    * [.delete(id)](#Alertstatus+delete) ⇒ <code>Promise</code>
+    * [.update(id, order, description, colour)](#Alertstatus+update) ⇒ <code>Promise</code>
+
+<a name="Alertstatus+create"></a>
+
+### alertstatus.create(value, stage, order, description, colour) ⇒ <code>Promise</code>
+Create a new alert status
+
+**Kind**: instance method of [<code>Alertstatus</code>](#Alertstatus)  
+**Returns**: <code>Promise</code> - A promise that contains the created alert status  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| value | <code>string</code> |  | The value of the alert status |
+| stage | <code>string</code> |  | The stage of the alert status |
+| order | <code>string</code> | <code>0</code> | The order of the alert status |
+| description | <code>string</code> | <code>null</code> | The description of the alert status |
+| colour | <code>string</code> | <code>&quot;#F1A5E7&quot;</code> | The color of the alert status |
+
+<a name="Alertstatus+delete"></a>
+
+### alertstatus.delete(id) ⇒ <code>Promise</code>
+Delete an alert status
+
+**Kind**: instance method of [<code>Alertstatus</code>](#Alertstatus)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted alert status  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the alert status |
+
+<a name="Alertstatus+update"></a>
+
+### alertstatus.update(id, order, description, colour) ⇒ <code>Promise</code>
+Update an alert status
+
+**Kind**: instance method of [<code>Alertstatus</code>](#Alertstatus)  
+**Returns**: <code>Promise</code> - A promise that contains the updated alert status  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the alert status |
+| order | <code>string</code> | <code>null</code> | The order of the alert status |
+| description | <code>string</code> | <code>null</code> | The description of the alert status |
+| colour | <code>string</code> | <code>null</code> | The color of the alert status |
+
 <a name="Attack"></a>
 
 ## Attack
@@ -1545,6 +1594,67 @@ List responders
 This class is used to interact with the customfield API
 
 **Kind**: global class  
+
+* [Customfield](#Customfield)
+    * [.list()](#Customfield+list) ⇒ <code>Promise</code>
+    * [.create(name, displayName, group, description, type, mandatory, options)](#Customfield+create) ⇒ <code>Promise</code>
+    * [.delete(id)](#Customfield+delete) ⇒ <code>Promise</code>
+    * [.update(id, displayName, description, type, options, mandatory)](#Customfield+update) ⇒ <code>Promise</code>
+
+<a name="Customfield+list"></a>
+
+### customfield.list() ⇒ <code>Promise</code>
+List all customfields
+
+**Kind**: instance method of [<code>Customfield</code>](#Customfield)  
+**Returns**: <code>Promise</code> - A promise that contains the list of customfields  
+<a name="Customfield+create"></a>
+
+### customfield.create(name, displayName, group, description, type, mandatory, options) ⇒ <code>Promise</code>
+Create a new customfield
+
+**Kind**: instance method of [<code>Customfield</code>](#Customfield)  
+**Returns**: <code>Promise</code> - A promise that contains the created customfield  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| name | <code>string</code> |  | The name of the customfield |
+| displayName | <code>string</code> |  | The display name of the customfield |
+| group | <code>string</code> |  | The group of the customfield |
+| description | <code>string</code> |  | The description of the customfield |
+| type | <code>string</code> |  | The type of the customfield |
+| mandatory | <code>string</code> | <code>false</code> | The mandatory of the customfield |
+| options | <code>string</code> |  | The options of the customfield |
+
+<a name="Customfield+delete"></a>
+
+### customfield.delete(id) ⇒ <code>Promise</code>
+Delete a customfield
+
+**Kind**: instance method of [<code>Customfield</code>](#Customfield)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted customfield  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the customfield |
+
+<a name="Customfield+update"></a>
+
+### customfield.update(id, displayName, description, type, options, mandatory) ⇒ <code>Promise</code>
+Update a customfield
+
+**Kind**: instance method of [<code>Customfield</code>](#Customfield)  
+**Returns**: <code>Promise</code> - A promise that contains the updated customfield  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the customfield |
+| displayName | <code>string</code> | <code>null</code> | The display name of the customfield |
+| description | <code>string</code> | <code>null</code> | The description of the customfield |
+| type | <code>string</code> | <code>null</code> | The type of the customfield |
+| options | <code>string</code> |  | The options of the customfield |
+| mandatory | <code>string</code> | <code>false</code> | The mandatory of the customfield |
+
 <a name="Dashboard"></a>
 
 ## Dashboard
