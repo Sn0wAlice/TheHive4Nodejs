@@ -814,6 +814,85 @@ This class is used to interact with the customfield API
 This class is used to interact with the Dashboard API
 
 **Kind**: global class  
+
+* [Dashboard](#Dashboard)
+    * [.createDashboard(title, group, description, status, definition, version)](#Dashboard+createDashboard) ⇒ <code>Promise</code>
+    * [.getDashboard(id)](#Dashboard+getDashboard) ⇒ <code>Promise</code>
+    * [.deleteDashboard(id)](#Dashboard+deleteDashboard) ⇒ <code>Promise</code>
+    * [.updateDashboard(dashboardId, title, group, description, definition, status, version)](#Dashboard+updateDashboard) ⇒ <code>Promise</code>
+    * [.changeOwner(dashboardId, userId)](#Dashboard+changeOwner)
+
+<a name="Dashboard+createDashboard"></a>
+
+### dashboard.createDashboard(title, group, description, status, definition, version) ⇒ <code>Promise</code>
+Create a dashboard
+
+**Kind**: instance method of [<code>Dashboard</code>](#Dashboard)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | <code>string</code> |  | The title of the dashboard |
+| group | <code>string</code> | <code>null</code> | The group of the dashboard |
+| description | <code>string</code> |  | The description of the dashboard |
+| status | <code>string</code> |  | The status of the dashboard |
+| definition | <code>string</code> |  | The definition of the dashboard |
+| version | <code>number</code> | <code>1</code> | The version of the dashboard |
+
+<a name="Dashboard+getDashboard"></a>
+
+### dashboard.getDashboard(id) ⇒ <code>Promise</code>
+Get a dashboard
+
+**Kind**: instance method of [<code>Dashboard</code>](#Dashboard)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the dashboard |
+
+<a name="Dashboard+deleteDashboard"></a>
+
+### dashboard.deleteDashboard(id) ⇒ <code>Promise</code>
+delete a dashboard
+
+**Kind**: instance method of [<code>Dashboard</code>](#Dashboard)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the dashboard |
+
+<a name="Dashboard+updateDashboard"></a>
+
+### dashboard.updateDashboard(dashboardId, title, group, description, definition, status, version) ⇒ <code>Promise</code>
+Update a dashboard
+
+**Kind**: instance method of [<code>Dashboard</code>](#Dashboard)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| dashboardId | <code>string</code> |  | The id of the dashboard |
+| title | <code>string</code> | <code>null</code> | The title of the dashboard |
+| group | <code>string</code> | <code>null</code> | The group of the dashboard |
+| description | <code>string</code> | <code>null</code> | The description of the dashboard |
+| definition | <code>string</code> | <code>null</code> | The definition of the dashboard |
+| status | <code>string</code> | <code>null</code> | The status of the dashboard |
+| version | <code>number</code> | <code></code> | The version of the dashboard |
+
+<a name="Dashboard+changeOwner"></a>
+
+### dashboard.changeOwner(dashboardId, userId)
+Change dashboard owner
+
+**Kind**: instance method of [<code>Dashboard</code>](#Dashboard)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| dashboardId | <code>string</code> | The id of the dashboard |
+| userId | <code>string</code> | The id of the user |
+
 <a name="Describe"></a>
 
 ## Describe
