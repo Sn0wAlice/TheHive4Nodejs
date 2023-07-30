@@ -1088,6 +1088,30 @@ Change dashboard owner
 This class is used to interact with the Describe API
 
 **Kind**: global class  
+
+* [Describe](#Describe)
+    * [.describe(model)](#Describe+describe) ⇒ <code>Promise</code>
+    * [.describeAll()](#Describe+describeAll) ⇒ <code>Promise</code>
+
+<a name="Describe+describe"></a>
+
+### describe.describe(model) ⇒ <code>Promise</code>
+Decribe a model
+
+**Kind**: instance method of [<code>Describe</code>](#Describe)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| model | <code>string</code> | The name of the model to describe |
+
+<a name="Describe+describeAll"></a>
+
+### describe.describeAll() ⇒ <code>Promise</code>
+Decribe all models
+
+**Kind**: instance method of [<code>Describe</code>](#Describe)  
+**Returns**: <code>Promise</code> - The response of the request  
 <a name="Function"></a>
 
 ## Function
