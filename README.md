@@ -712,6 +712,118 @@ Get flow of audit events
 This class is used to interact with the case-report API
 
 **Kind**: global class  
+
+* [CaseReport](#CaseReport)
+    * [.render(format, caseReportTemplateId, caseId, maxElements)](#CaseReport+render) ⇒ <code>Promise</code>
+    * [.renderPost(format, definition, caseReportTemplateId, caseId, maxElements)](#CaseReport+renderPost) ⇒ <code>Promise</code>
+    * [.generate(caseId, caseReportTemplateId, format)](#CaseReport+generate) ⇒ <code>Promise</code>
+    * [.upload(caseId, file)](#CaseReport+upload)
+    * [.download(reportId)](#CaseReport+download) ⇒ <code>Promise</code>
+    * [.delete(reportId)](#CaseReport+delete) ⇒ <code>Promise</code>
+    * [.update(reportId, file)](#CaseReport+update) ⇒ <code>Promise</code>
+    * [.listFormats()](#CaseReport+listFormats) ⇒ <code>Promise</code>
+
+<a name="CaseReport+render"></a>
+
+### caseReport.render(format, caseReportTemplateId, caseId, maxElements) ⇒ <code>Promise</code>
+render case report template GET
+
+**Kind**: instance method of [<code>CaseReport</code>](#CaseReport)  
+**Returns**: <code>Promise</code> - A promise that contains the rendered case report template  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| format | <code>string</code> |  | The format of the report |
+| caseReportTemplateId | <code>string</code> |  | The id of the case report template |
+| caseId | <code>string</code> |  | The id of the case |
+| maxElements | <code>number</code> | <code>100</code> | The max number of elements |
+
+<a name="CaseReport+renderPost"></a>
+
+### caseReport.renderPost(format, definition, caseReportTemplateId, caseId, maxElements) ⇒ <code>Promise</code>
+Render case report template POST
+
+**Kind**: instance method of [<code>CaseReport</code>](#CaseReport)  
+**Returns**: <code>Promise</code> - A promise that contains the rendered case report template  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| format | <code>string</code> |  | The format of the report |
+| definition | <code>string</code> |  | The definition of the report |
+| caseReportTemplateId | <code>string</code> |  | The id of the case report template |
+| caseId | <code>string</code> |  | The id of the case |
+| maxElements | <code>number</code> | <code>100</code> | The max number of elements |
+
+<a name="CaseReport+generate"></a>
+
+### caseReport.generate(caseId, caseReportTemplateId, format) ⇒ <code>Promise</code>
+Generate case report template
+
+**Kind**: instance method of [<code>CaseReport</code>](#CaseReport)  
+**Returns**: <code>Promise</code> - A promise that contains the generated case report template  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| caseId | <code>string</code> | The id of the case |
+| caseReportTemplateId | <code>string</code> | The id of the case report template |
+| format | <code>string</code> | The format of the report |
+
+<a name="CaseReport+upload"></a>
+
+### caseReport.upload(caseId, file)
+Upload case report
+
+**Kind**: instance method of [<code>CaseReport</code>](#CaseReport)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| caseId | <code>string</code> | The id of the case |
+| file | <code>string</code> | The file to upload |
+
+<a name="CaseReport+download"></a>
+
+### caseReport.download(reportId) ⇒ <code>Promise</code>
+Download case report
+
+**Kind**: instance method of [<code>CaseReport</code>](#CaseReport)  
+**Returns**: <code>Promise</code> - A promise that contains the case report  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| reportId | <code>string</code> | The id of the report |
+
+<a name="CaseReport+delete"></a>
+
+### caseReport.delete(reportId) ⇒ <code>Promise</code>
+Delete case report
+
+**Kind**: instance method of [<code>CaseReport</code>](#CaseReport)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted case report  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| reportId | <code>string</code> | The id of the report |
+
+<a name="CaseReport+update"></a>
+
+### caseReport.update(reportId, file) ⇒ <code>Promise</code>
+Update case report
+
+**Kind**: instance method of [<code>CaseReport</code>](#CaseReport)  
+**Returns**: <code>Promise</code> - A promise that contains the updated case report  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| reportId | <code>string</code> | The id of the report |
+| file | <code>string</code> | The file to upload |
+
+<a name="CaseReport+listFormats"></a>
+
+### caseReport.listFormats() ⇒ <code>Promise</code>
+List all supported formats
+
+**Kind**: instance method of [<code>CaseReport</code>](#CaseReport)  
+**Returns**: <code>Promise</code> - A promise that contains the list of all supported formats  
 <a name="Case"></a>
 
 ## Case
