@@ -1850,6 +1850,49 @@ This class is used to interact with the observable API
 This class is used to interact with the ObservableType API
 
 **Kind**: global class  
+
+* [ObservableType](#ObservableType)
+    * [.getObservableTypeById(id)](#ObservableType+getObservableTypeById) ⇒ <code>Promise</code>
+    * [.deleteObservableTypeById(id)](#ObservableType+deleteObservableTypeById) ⇒ <code>Promise</code>
+    * [.createObservableType(name, isAttachment)](#ObservableType+createObservableType) ⇒ <code>Promise</code>
+
+<a name="ObservableType+getObservableTypeById"></a>
+
+### observableType.getObservableTypeById(id) ⇒ <code>Promise</code>
+Get observable type by id
+
+**Kind**: instance method of [<code>ObservableType</code>](#ObservableType)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the observable type |
+
+<a name="ObservableType+deleteObservableTypeById"></a>
+
+### observableType.deleteObservableTypeById(id) ⇒ <code>Promise</code>
+Delete observable type by id
+
+**Kind**: instance method of [<code>ObservableType</code>](#ObservableType)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the observable type |
+
+<a name="ObservableType+createObservableType"></a>
+
+### observableType.createObservableType(name, isAttachment) ⇒ <code>Promise</code>
+Create observable type
+
+**Kind**: instance method of [<code>ObservableType</code>](#ObservableType)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name of the observable type |
+| isAttachment | <code>string</code> | The isAttachment of the observable type |
+
 <a name="Organisation"></a>
 
 ## Organisation
