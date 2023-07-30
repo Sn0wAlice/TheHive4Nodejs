@@ -86,9 +86,9 @@ const Casestatus = class {
         description = null,
         colour = null
     ) {
-        // check id is a string of max 64 chars
-        if (!checks.checkSize(1, 64, id)) {
-            throw new Error("id must be a string of max 64 chars")
+        // check id is a string that start with ~
+        if (!checks.checkStartWith(id, "~")) {
+            throw new Error("id must be a string that start with ~")
         }
 
         // check order is a number of max 999999
