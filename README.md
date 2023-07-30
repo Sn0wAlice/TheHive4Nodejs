@@ -2316,6 +2316,63 @@ Update page template by id
 This class is used to interact with the Profile API
 
 **Kind**: global class  
+
+* [Profile](#Profile)
+    * [.create(name, permissions)](#Profile+create) ⇒ <code>Promise</code>
+    * [.get(id)](#Profile+get) ⇒ <code>Promise</code>
+    * [.delete(id)](#Profile+delete) ⇒ <code>Promise</code>
+    * [.update(id, name, permissions)](#Profile+update)
+
+<a name="Profile+create"></a>
+
+### profile.create(name, permissions) ⇒ <code>Promise</code>
+Create a new profile
+
+**Kind**: instance method of [<code>Profile</code>](#Profile)  
+**Returns**: <code>Promise</code> - A promise that contains the created profile  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name of the profile |
+| permissions | <code>Array.&lt;string&gt;</code> | The permissions of the profile |
+
+<a name="Profile+get"></a>
+
+### profile.get(id) ⇒ <code>Promise</code>
+Get profile by id
+
+**Kind**: instance method of [<code>Profile</code>](#Profile)  
+**Returns**: <code>Promise</code> - A promise that contains the profile  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the profile |
+
+<a name="Profile+delete"></a>
+
+### profile.delete(id) ⇒ <code>Promise</code>
+delete profile by id
+
+**Kind**: instance method of [<code>Profile</code>](#Profile)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted profile  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the profile |
+
+<a name="Profile+update"></a>
+
+### profile.update(id, name, permissions)
+Update a profile
+
+**Kind**: instance method of [<code>Profile</code>](#Profile)  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the profile |
+| name | <code>string</code> | <code>null</code> | The name of the profile |
+| permissions | <code>Array.&lt;string&gt;</code> | <code></code> | The permissions of the profile |
+
 <a name="Share"></a>
 
 ## Share
