@@ -19,18 +19,84 @@ class fetchPrivate {
         return this.thehivehostname
     }
 
-    async query(method, endpoint, body) {
+    async get(endpoint) {
         try {
             const req = await f(`${this.thehivehostname}${endpoint}`, {
-                method: method,
+                method: "GET",
                 headers: {
                     "Authorization": `Bearer ${this.thehiveapikey}`,
-                },
-                body: body
+                }
             })
             return await req.json()
         } catch (error) {
             return null
+        }
+    }
+    async post(endpoint, body) {
+        try {
+            const req = await f(`${this.thehivehostname}${endpoint}`, {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${this.thehiveapikey}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(body)
+            })
+            return await req.json()
+        } catch (error) {
+            return null       
+        }
+    }
+
+    async delete(endpoint) {
+        try {
+            const req = await f(`${this.thehivehostname}${endpoint}`, {
+                method: "DELETE",
+                headers: {
+                    "Authorization": `Bearer ${this.thehiveapikey}`,
+                }
+            })
+
+            // check if status is 200
+            if(req.status == 200) {
+                return {delete: true}
+            }
+
+            return await req.json()
+        } catch (error) {
+            return null
+        }
+    }
+
+    async patch(endpoint, body) {
+        try {
+            const req = await f(`${this.thehivehostname}${endpoint}`, {
+                method: "PATCH",
+                headers: {
+                    "Authorization": `Bearer ${this.thehiveapikey}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(body)
+            })
+            return await req.json()
+        } catch (error) {
+            return null
+        }
+    }
+
+    async put(endpoint, body) {
+        try {
+            const req = await f(`${this.thehivehostname}${endpoint}`, {
+                method: "PUT",
+                headers: {
+                    "Authorization": `Bearer ${this.thehiveapikey}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(body)
+            })
+            return await req.json()
+        } catch (error) {
+            return null            
         }
     }
 }

@@ -1,5 +1,5 @@
-const fetch = require('./utils/fetch.js')
 const readDir = require('./utils/readDir.js')
+const fetch = require('./utils/fetch.js')
 const fetchInstance = fetch.getInstance()
 
 let thehive4nodejs = class {
