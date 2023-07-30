@@ -1281,6 +1281,48 @@ Get attachments from observable
 This class is used to interact with the Login API
 
 **Kind**: global class  
+
+* [Login](#Login)
+    * [.login(user, password, organisation, code)](#Login+login)
+    * [.logout()](#Login+logout) ⇒ <code>Promise</code>
+    * [.logoutPost()](#Login+logoutPost) ⇒ <code>Promise</code>
+    * [.getPasswordPolicy()](#Login+getPasswordPolicy) ⇒ <code>Promise</code>
+
+<a name="Login+login"></a>
+
+### login.login(user, password, organisation, code)
+Login
+
+**Kind**: instance method of [<code>Login</code>](#Login)  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| user | <code>string</code> |  | The user to login |
+| password | <code>string</code> |  | The password of the user |
+| organisation | <code>string</code> | <code>null</code> | The organisation of the user |
+| code | <code>string</code> | <code>null</code> | The code of the user |
+
+<a name="Login+logout"></a>
+
+### login.logout() ⇒ <code>Promise</code>
+Logout
+
+**Kind**: instance method of [<code>Login</code>](#Login)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="Login+logoutPost"></a>
+
+### login.logoutPost() ⇒ <code>Promise</code>
+Logout (POST)
+
+**Kind**: instance method of [<code>Login</code>](#Login)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="Login+getPasswordPolicy"></a>
+
+### login.getPasswordPolicy() ⇒ <code>Promise</code>
+Get current password policy
+
+**Kind**: instance method of [<code>Login</code>](#Login)  
+**Returns**: <code>Promise</code> - The response of the request  
 <a name="MISP"></a>
 
 ## MISP
