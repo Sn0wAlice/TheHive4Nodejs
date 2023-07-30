@@ -1,0 +1,25 @@
+{
+  "name": "thehive4nodejs",
+  "version": "1.0.2",
+  "description": "Nodejs module to interact with your TheHive5 instance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Sn0wAlice/TheHive4Nodejs.git"
+  },
+  "keywords": [
+    "thehive5"
+  ],
+  "author": "Sn0wAlice",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Sn0wAlice/TheHive4Nodejs/issues"
+  },
+  "homepage": "https://github.com/Sn0wAlice/TheHive4Nodejs#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.12"
+  }
+}
