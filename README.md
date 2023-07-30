@@ -1207,6 +1207,99 @@ This class is used to interact with the casestatus API
 This class is used to interact with the CaseTemplate API
 
 **Kind**: global class  
+
+* [CaseTemplate](#CaseTemplate)
+    * [.createCaseTemplate(name, displayName, titlePrefix, description, severity, tags, flag, tlp, pap, summary, tasks, pageTeplateIds, customFields)](#CaseTemplate+createCaseTemplate) ⇒ <code>Promise</code>
+    * [.getCaseTemplate(id)](#CaseTemplate+getCaseTemplate) ⇒ <code>Promise</code>
+    * [.deleteCaseTemplate(id)](#CaseTemplate+deleteCaseTemplate) ⇒ <code>Promise</code>
+    * [.updateCaseTemplate(id, name, displayName, titlePrefix, description, severity, tags, flag, tlp, pap, summary, customFields, tasks)](#CaseTemplate+updateCaseTemplate) ⇒ <code>Promise</code>
+    * [.linkPageTemplatesToCaseTemplate(id, pageTemplateIds)](#CaseTemplate+linkPageTemplatesToCaseTemplate) ⇒ <code>Promise</code>
+
+<a name="CaseTemplate+createCaseTemplate"></a>
+
+### caseTemplate.createCaseTemplate(name, displayName, titlePrefix, description, severity, tags, flag, tlp, pap, summary, tasks, pageTeplateIds, customFields) ⇒ <code>Promise</code>
+Create case template
+
+**Kind**: instance method of [<code>CaseTemplate</code>](#CaseTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| name | <code>string</code> |  | The name of the case template |
+| displayName | <code>string</code> | <code>null</code> | The display name of the case template |
+| titlePrefix | <code>string</code> | <code>null</code> | The title prefix of the case template |
+| description | <code>string</code> | <code>null</code> | The description of the case template |
+| severity | <code>string</code> | <code>2</code> | The severity of the case template |
+| tags | <code>string</code> |  | The tags of the case template |
+| flag | <code>string</code> | <code>false</code> | The flag of the case template |
+| tlp | <code>string</code> | <code>2</code> | The tlp of the case template |
+| pap | <code>string</code> | <code>2</code> | The pap of the case template |
+| summary | <code>string</code> | <code>null</code> | The summary of the case template |
+| tasks | <code>string</code> |  | The tasks of the case template |
+| pageTeplateIds | <code>string</code> |  | The page template ids of the case template |
+| customFields | <code>string</code> |  | The custom fields of the case template |
+
+<a name="CaseTemplate+getCaseTemplate"></a>
+
+### caseTemplate.getCaseTemplate(id) ⇒ <code>Promise</code>
+Get case template
+
+**Kind**: instance method of [<code>CaseTemplate</code>](#CaseTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the case template |
+
+<a name="CaseTemplate+deleteCaseTemplate"></a>
+
+### caseTemplate.deleteCaseTemplate(id) ⇒ <code>Promise</code>
+Delete case template
+
+**Kind**: instance method of [<code>CaseTemplate</code>](#CaseTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the case template |
+
+<a name="CaseTemplate+updateCaseTemplate"></a>
+
+### caseTemplate.updateCaseTemplate(id, name, displayName, titlePrefix, description, severity, tags, flag, tlp, pap, summary, customFields, tasks) ⇒ <code>Promise</code>
+Update case template
+
+**Kind**: instance method of [<code>CaseTemplate</code>](#CaseTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the case template |
+| name | <code>string</code> | <code>null</code> | The name of the case template |
+| displayName | <code>string</code> | <code>null</code> | The display name of the case template |
+| titlePrefix | <code>string</code> | <code>null</code> | The title prefix of the case template |
+| description | <code>string</code> | <code>null</code> | The description of the case template |
+| severity | <code>string</code> | <code>null</code> | The severity of the case template |
+| tags | <code>string</code> | <code>null</code> | The tags of the case template |
+| flag | <code>string</code> | <code>null</code> | The flag of the case template |
+| tlp | <code>string</code> | <code>null</code> | The tlp of the case template |
+| pap | <code>string</code> | <code>null</code> | The pap of the case template |
+| summary | <code>string</code> | <code>null</code> | The summary of the case template |
+| customFields | <code>string</code> | <code>null</code> | The custom fields of the case template |
+| tasks | <code>string</code> | <code>null</code> | The tasks of the case template |
+
+<a name="CaseTemplate+linkPageTemplatesToCaseTemplate"></a>
+
+### caseTemplate.linkPageTemplatesToCaseTemplate(id, pageTemplateIds) ⇒ <code>Promise</code>
+Link pages template to case template
+
+**Kind**: instance method of [<code>CaseTemplate</code>](#CaseTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the case template |
+| pageTemplateIds | <code>string</code> | The page template ids to link to the case template |
+
 <a name="Comment"></a>
 
 ## Comment
