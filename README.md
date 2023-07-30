@@ -21,6 +21,9 @@ Nodejs module to interact with your TheHive5 instance
 <dt><a href="#Attack">Attack</a></dt>
 <dd><p>This class is used to interact with the Attack API</p>
 </dd>
+<dt><a href="#Audit">Audit</a></dt>
+<dd><p>This class is used to interact with the Audit API</p>
+</dd>
 <dt><a href="#CaseReport">CaseReport</a></dt>
 <dd><p>This class is used to interact with the case-report API</p>
 </dd>
@@ -512,6 +515,48 @@ This class is used to interact with the alertstatus API
 This class is used to interact with the Attack API
 
 **Kind**: global class  
+<a name="Audit"></a>
+
+## Audit
+This class is used to interact with the Audit API
+
+**Kind**: global class  
+
+* [Audit](#Audit)
+    * [.createStream()](#Audit+createStream) ⇒ <code>Promise</code>
+    * [.getStream(id)](#Audit+getStream)
+    * [.getFlow(id)](#Audit+getFlow) ⇒ <code>Promise</code>
+
+<a name="Audit+createStream"></a>
+
+### audit.createStream() ⇒ <code>Promise</code>
+Create a stream of audit events
+
+**Kind**: instance method of [<code>Audit</code>](#Audit)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="Audit+getStream"></a>
+
+### audit.getStream(id)
+Get a stream of audit events
+
+**Kind**: instance method of [<code>Audit</code>](#Audit)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the stream |
+
+<a name="Audit+getFlow"></a>
+
+### audit.getFlow(id) ⇒ <code>Promise</code>
+Get flow of audit events
+
+**Kind**: instance method of [<code>Audit</code>](#Audit)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> | <code>null</code> | The id of the stream |
+
 <a name="CaseReport"></a>
 
 ## CaseReport
