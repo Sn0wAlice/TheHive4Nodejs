@@ -1067,6 +1067,134 @@ get the shares of a case
 This class is used to interact with the CaseReportTemplate API
 
 **Kind**: global class  
+
+* [CaseReportTemplate](#CaseReportTemplate)
+    * [.createCaseReportTemplate(title, group, description, definition, version)](#CaseReportTemplate+createCaseReportTemplate) ⇒ <code>Promise</code>
+    * [.getCaseReportTemplateById(id)](#CaseReportTemplate+getCaseReportTemplateById) ⇒ <code>Promise</code>
+    * [.deleteCaseReportTemplateById(id)](#CaseReportTemplate+deleteCaseReportTemplateById) ⇒ <code>Promise</code>
+    * [.updateCaseReportTemplateById(id, title, group, description, definition, version)](#CaseReportTemplate+updateCaseReportTemplateById) ⇒ <code>Promise</code>
+    * [.getCaseReportTemplatesOptions()](#CaseReportTemplate+getCaseReportTemplatesOptions) ⇒ <code>Promise</code>
+    * [.createAttachmentToCaseReportTemplate(id, attachment, canrename)](#CaseReportTemplate+createAttachmentToCaseReportTemplate)
+    * [.getAttachmentOfCaseReportTemplate(id, attachmentid)](#CaseReportTemplate+getAttachmentOfCaseReportTemplate) ⇒ <code>Promise</code>
+    * [.deleteAttachmentOfCaseReportTemplate(id, attachmentid)](#CaseReportTemplate+deleteAttachmentOfCaseReportTemplate) ⇒ <code>Promise</code>
+    * [.downloadAttachmentOfCaseReportTemplate(id, attachmentid)](#CaseReportTemplate+downloadAttachmentOfCaseReportTemplate) ⇒ <code>Promise</code>
+
+<a name="CaseReportTemplate+createCaseReportTemplate"></a>
+
+### caseReportTemplate.createCaseReportTemplate(title, group, description, definition, version) ⇒ <code>Promise</code>
+Create case report template
+
+**Kind**: instance method of [<code>CaseReportTemplate</code>](#CaseReportTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| title | <code>string</code> | The title of the case report template |
+| group | <code>string</code> | The group of the case report template |
+| description | <code>string</code> | The description of the case report template |
+| definition | <code>string</code> | The definition of the case report template |
+| version | <code>string</code> | The version of the case report template |
+
+<a name="CaseReportTemplate+getCaseReportTemplateById"></a>
+
+### caseReportTemplate.getCaseReportTemplateById(id) ⇒ <code>Promise</code>
+Get case report template by id
+
+**Kind**: instance method of [<code>CaseReportTemplate</code>](#CaseReportTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the case report template |
+
+<a name="CaseReportTemplate+deleteCaseReportTemplateById"></a>
+
+### caseReportTemplate.deleteCaseReportTemplateById(id) ⇒ <code>Promise</code>
+Delete case report template by id
+
+**Kind**: instance method of [<code>CaseReportTemplate</code>](#CaseReportTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the case report template |
+
+<a name="CaseReportTemplate+updateCaseReportTemplateById"></a>
+
+### caseReportTemplate.updateCaseReportTemplateById(id, title, group, description, definition, version) ⇒ <code>Promise</code>
+Update case report template by id
+
+**Kind**: instance method of [<code>CaseReportTemplate</code>](#CaseReportTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the case report template |
+| title | <code>string</code> | <code>null</code> | The title of the case report template |
+| group | <code>string</code> | <code>null</code> | The group of the case report template |
+| description | <code>string</code> | <code>null</code> | The description of the case report template |
+| definition | <code>string</code> | <code>null</code> | The definition of the case report template |
+| version | <code>string</code> | <code>null</code> | The version of the case report template |
+
+<a name="CaseReportTemplate+getCaseReportTemplatesOptions"></a>
+
+### caseReportTemplate.getCaseReportTemplatesOptions() ⇒ <code>Promise</code>
+Get case report templates options
+
+**Kind**: instance method of [<code>CaseReportTemplate</code>](#CaseReportTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="CaseReportTemplate+createAttachmentToCaseReportTemplate"></a>
+
+### caseReportTemplate.createAttachmentToCaseReportTemplate(id, attachment, canrename)
+Create attachment to case report template
+
+**Kind**: instance method of [<code>CaseReportTemplate</code>](#CaseReportTemplate)  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the case report template |
+| attachment | <code>Array.&lt;string&gt;</code> |  | The attachment of the case report template |
+| canrename | <code>boolean</code> | <code>true</code> | The canrename of the case report template |
+
+<a name="CaseReportTemplate+getAttachmentOfCaseReportTemplate"></a>
+
+### caseReportTemplate.getAttachmentOfCaseReportTemplate(id, attachmentid) ⇒ <code>Promise</code>
+Get attachment of case report template
+
+**Kind**: instance method of [<code>CaseReportTemplate</code>](#CaseReportTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the case report template |
+| attachmentid | <code>string</code> | The attachmentid of the case report template |
+
+<a name="CaseReportTemplate+deleteAttachmentOfCaseReportTemplate"></a>
+
+### caseReportTemplate.deleteAttachmentOfCaseReportTemplate(id, attachmentid) ⇒ <code>Promise</code>
+Delete attachment of case report template
+
+**Kind**: instance method of [<code>CaseReportTemplate</code>](#CaseReportTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the case report template |
+| attachmentid | <code>string</code> | The attachmentid of the case report template |
+
+<a name="CaseReportTemplate+downloadAttachmentOfCaseReportTemplate"></a>
+
+### caseReportTemplate.downloadAttachmentOfCaseReportTemplate(id, attachmentid) ⇒ <code>Promise</code>
+Download attachment of case report template
+
+**Kind**: instance method of [<code>CaseReportTemplate</code>](#CaseReportTemplate)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the case report template |
+| attachmentid | <code>string</code> | The attachmentid of the case report template |
+
 <a name="Casestatus"></a>
 
 ## Casestatus
