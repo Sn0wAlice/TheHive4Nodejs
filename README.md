@@ -19,7 +19,7 @@ Nodejs module to interact with your TheHive5 instance
 <dd><p>This class is used to interact with the alertstatus API</p>
 </dd>
 <dt><a href="#Attack">Attack</a></dt>
-<dd><p>This class is used to interact with the Attack API</p>
+<dd><p>This class is used to interact with the Att&amp;ck API</p>
 </dd>
 <dt><a href="#Audit">Audit</a></dt>
 <dd><p>This class is used to interact with the Audit API</p>
@@ -512,9 +512,109 @@ This class is used to interact with the alertstatus API
 <a name="Attack"></a>
 
 ## Attack
-This class is used to interact with the Attack API
+This class is used to interact with the Att&ck API
 
 **Kind**: global class  
+
+* [Attack](#Attack)
+    * [.createCatalog(name, description, variant)](#Attack+createCatalog) ⇒ <code>Promise</code>
+    * [.deleteCatalog(id)](#Attack+deleteCatalog) ⇒ <code>Promise</code>
+    * [.updateCatalog(id, name, description, variant)](#Attack+updateCatalog)
+    * [.importFile(url, catalogid, variant)](#Attack+importFile) ⇒ <code>Promise</code>
+    * [.getPattern(id)](#Attack+getPattern) ⇒ <code>Promise</code>
+    * [.deletePattern(id)](#Attack+deletePattern) ⇒ <code>Promise</code>
+    * [.getCasePattern(caseid)](#Attack+getCasePattern) ⇒ <code>Promise</code>
+
+<a name="Attack+createCatalog"></a>
+
+### attack.createCatalog(name, description, variant) ⇒ <code>Promise</code>
+Create catalog of TTP
+
+**Kind**: instance method of [<code>Attack</code>](#Attack)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| name | <code>string</code> |  | The name of the catalog |
+| description | <code>string</code> | <code>null</code> | The description of the catalog |
+| variant | <code>string</code> | <code>null</code> | The variant of the catalog |
+
+<a name="Attack+deleteCatalog"></a>
+
+### attack.deleteCatalog(id) ⇒ <code>Promise</code>
+Delete catalog of TTP
+
+**Kind**: instance method of [<code>Attack</code>](#Attack)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the catalog |
+
+<a name="Attack+updateCatalog"></a>
+
+### attack.updateCatalog(id, name, description, variant)
+Update catalog of TTP
+
+**Kind**: instance method of [<code>Attack</code>](#Attack)  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the catalog |
+| name | <code>string</code> | <code>null</code> | The name of the catalog |
+| description | <code>string</code> | <code>null</code> | The description of the catalog |
+| variant | <code>string</code> | <code>null</code> | The variant of the catalog |
+
+<a name="Attack+importFile"></a>
+
+### attack.importFile(url, catalogid, variant) ⇒ <code>Promise</code>
+Import MITRE Att&ck file
+
+**Kind**: instance method of [<code>Attack</code>](#Attack)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| url | <code>string</code> |  | The url of the file |
+| catalogid | <code>string</code> |  | The id of the catalog |
+| variant | <code>string</code> | <code>null</code> | The variant of the catalog |
+
+<a name="Attack+getPattern"></a>
+
+### attack.getPattern(id) ⇒ <code>Promise</code>
+Get pattern
+
+**Kind**: instance method of [<code>Attack</code>](#Attack)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the pattern |
+
+<a name="Attack+deletePattern"></a>
+
+### attack.deletePattern(id) ⇒ <code>Promise</code>
+Delete pattern
+
+**Kind**: instance method of [<code>Attack</code>](#Attack)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the pattern |
+
+<a name="Attack+getCasePattern"></a>
+
+### attack.getCasePattern(caseid) ⇒ <code>Promise</code>
+Get Case pattern
+
+**Kind**: instance method of [<code>Attack</code>](#Attack)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| caseid | <code>string</code> | The id of the case |
+
 <a name="Audit"></a>
 
 ## Audit
