@@ -9,6 +9,9 @@ Nodejs module to interact with your TheHive5 instance
 ## Classes
 
 <dl>
+<dt><a href="#Alert">Alert</a></dt>
+<dd><p>Alert class to manage alerts</p>
+</dd>
 <dt><a href="#Case">Case</a></dt>
 <dd><p>This class is used to interact with the case API</p>
 </dd>
@@ -21,6 +24,235 @@ Nodejs module to interact with your TheHive5 instance
 <dd><p>A function to execute a query on thehive</p>
 </dd>
 </dl>
+
+<a name="Alert"></a>
+
+## Alert
+Alert class to manage alerts
+
+**Kind**: global class  
+
+* [Alert](#Alert)
+    * [.create(type, source, sourceRef, externalLink, title, description, severity, date, tags, flag, tlp, pap, customFields, summary, assignee, caseTemplate, observables, procedures)](#Alert+create) ⇒ <code>Promise.&lt;object&gt;</code>
+    * [.get(id)](#Alert+get) ⇒ <code>Promise.&lt;object&gt;</code>
+    * [.delete(id)](#Alert+delete) ⇒ <code>Promise.&lt;object&gt;</code>
+    * [.update(alertId, type, source, sourceRef, externalLink, title, description, severity, date, lastSyncDate, tags, flag, tlp, pap, follow, customFields, summary, assignee, status, addTags, removeTags)](#Alert+update) ⇒ <code>Promise.&lt;object&gt;</code>
+    * [.bulkupdate(alertIds, type, source, sourceRef, externalLink, title, description, severity, date, lastSyncDate, tags, tlp, pap, follow, customFields, summary, assignee, status, addTags, removeTags)](#Alert+bulkupdate) ⇒ <code>Promise</code>
+    * [.createCaseFromAlert(alertId, title, description, severity, startDate, endDate, tags, flag, tlp, pap, status, summary, assignee, customFields, caseTemplate, tasks, pages, sharingParameters, taskRule, observableRule)](#Alert+createCaseFromAlert) ⇒ <code>Promise</code>
+    * [.followAlert(alertId)](#Alert+followAlert) ⇒ <code>Promise</code>
+    * [.unfollowAlert(alertId)](#Alert+unfollowAlert) ⇒ <code>Promise</code>
+    * [.mergeAlert(alertId, caseId)](#Alert+mergeAlert) ⇒ <code>Promise</code>
+    * [.mergeAlerts(caseId, alertIds)](#Alert+mergeAlerts) ⇒ <code>Promise</code>
+    * [.deleteAlerts(alertIds)](#Alert+deleteAlerts) ⇒ <code>Promise</code>
+
+<a name="Alert+create"></a>
+
+### alert.create(type, source, sourceRef, externalLink, title, description, severity, date, tags, flag, tlp, pap, customFields, summary, assignee, caseTemplate, observables, procedures) ⇒ <code>Promise.&lt;object&gt;</code>
+Create a new alert
+
+**Kind**: instance method of [<code>Alert</code>](#Alert)  
+**Returns**: <code>Promise.&lt;object&gt;</code> - - The response  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| type | <code>string</code> |  | The type of the alert |
+| source | <code>string</code> |  | The source of the alert |
+| sourceRef | <code>string</code> |  | The sourceRef of the alert |
+| externalLink | <code>string</code> | <code>null</code> | The externalLink of the alert |
+| title | <code>string</code> |  | The title of the alert |
+| description | <code>string</code> |  | The description of the alert |
+| severity | <code>number</code> | <code>2</code> | The severity of the alert |
+| date | <code>number</code> |  | The date of the alert |
+| tags | <code>Array.&lt;string&gt;</code> |  | The tags of the alert |
+| flag | <code>boolean</code> | <code>false</code> | The flag of the alert |
+| tlp | <code>number</code> | <code>2</code> | The tlp of the alert |
+| pap | <code>number</code> | <code>2</code> | The pap of the alert |
+| customFields | <code>Array.&lt;object&gt;</code> |  | The customFields of the alert |
+| summary | <code>string</code> | <code>null</code> | The summary of the alert |
+| assignee | <code>string</code> | <code>null</code> | The assignee of the alert |
+| caseTemplate | <code>string</code> | <code>null</code> | The caseTemplate of the alert |
+| observables | <code>Array.&lt;object&gt;</code> |  | The observables of the alert |
+| procedures | <code>Array.&lt;object&gt;</code> |  | The procedures of the alert |
+
+<a name="Alert+get"></a>
+
+### alert.get(id) ⇒ <code>Promise.&lt;object&gt;</code>
+Get an alert
+
+**Kind**: instance method of [<code>Alert</code>](#Alert)  
+**Returns**: <code>Promise.&lt;object&gt;</code> - - The response  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the alert |
+
+<a name="Alert+delete"></a>
+
+### alert.delete(id) ⇒ <code>Promise.&lt;object&gt;</code>
+Delete an alert
+
+**Kind**: instance method of [<code>Alert</code>](#Alert)  
+**Returns**: <code>Promise.&lt;object&gt;</code> - - The response  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the alert |
+
+<a name="Alert+update"></a>
+
+### alert.update(alertId, type, source, sourceRef, externalLink, title, description, severity, date, lastSyncDate, tags, flag, tlp, pap, follow, customFields, summary, assignee, status, addTags, removeTags) ⇒ <code>Promise.&lt;object&gt;</code>
+Update an alert
+
+**Kind**: instance method of [<code>Alert</code>](#Alert)  
+**Returns**: <code>Promise.&lt;object&gt;</code> - - The response  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| alertId | <code>string</code> |  | The id of the alert |
+| type | <code>string</code> | <code>null</code> | The type of the alert |
+| source | <code>string</code> | <code>null</code> | The source of the alert |
+| sourceRef | <code>string</code> | <code>null</code> | The sourceRef of the alert |
+| externalLink | <code>string</code> | <code>null</code> | The externalLink of the alert |
+| title | <code>string</code> | <code>null</code> | The title of the alert |
+| description | <code>string</code> | <code>null</code> | The description of the alert |
+| severity | <code>number</code> | <code></code> | The severity of the alert |
+| date | <code>number</code> | <code></code> | The date of the alert |
+| lastSyncDate | <code>number</code> | <code></code> | The lastSyncDate of the alert |
+| tags | <code>Array.&lt;string&gt;</code> | <code></code> | The tags of the alert |
+| flag | <code>boolean</code> |  | The flag of the alert |
+| tlp | <code>number</code> |  | The tlp of the alert |
+| pap | <code>number</code> |  | The pap of the alert |
+| follow | <code>boolean</code> |  | The follow of the alert |
+| customFields | <code>object</code> |  | The customFields of the alert |
+| summary | <code>string</code> |  | The summary of the alert |
+| assignee | <code>string</code> |  | The assignee of the alert |
+| status | <code>string</code> |  | The status of the alert |
+| addTags | <code>Array.&lt;string&gt;</code> |  | The addTags of the alert |
+| removeTags | <code>Array.&lt;string&gt;</code> |  | The removeTags of the alert |
+
+<a name="Alert+bulkupdate"></a>
+
+### alert.bulkupdate(alertIds, type, source, sourceRef, externalLink, title, description, severity, date, lastSyncDate, tags, tlp, pap, follow, customFields, summary, assignee, status, addTags, removeTags) ⇒ <code>Promise</code>
+Bulk update alerts
+
+**Kind**: instance method of [<code>Alert</code>](#Alert)  
+**Returns**: <code>Promise</code> - - A promise which resolves to the response body  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| alertIds | <code>Array</code> |  | An array of alert ids to update |
+| type | <code>String</code> | <code></code> | The type of the alert |
+| source | <code>String</code> | <code></code> | The source of the alert |
+| sourceRef | <code>String</code> | <code></code> | The source reference of the alert |
+| externalLink | <code>String</code> | <code></code> | The external link of the alert |
+| title | <code>String</code> | <code></code> | The title of the alert |
+| description | <code>String</code> | <code></code> | The description of the alert |
+| severity | <code>Number</code> | <code></code> | The severity of the alert |
+| date | <code>Number</code> | <code></code> | The date of the alert |
+| lastSyncDate | <code>Number</code> | <code></code> | The last sync date of the alert |
+| tags | <code>Array</code> | <code></code> | The tags of the alert |
+| tlp | <code>Number</code> | <code></code> | The TLP of the alert |
+| pap | <code>Number</code> | <code></code> | The PAP of the alert |
+| follow | <code>Boolean</code> | <code></code> | The follow status of the alert |
+| customFields | <code>Object</code> | <code></code> | The custom fields of the alert |
+| summary | <code>String</code> | <code></code> | The summary of the alert |
+| assignee | <code>String</code> | <code></code> | The assignee of the alert |
+| status | <code>String</code> | <code></code> | The status of the alert |
+| addTags | <code>Array</code> | <code></code> | The tags to add to the alert |
+| removeTags | <code>Array</code> | <code></code> | The tags to remove from the alert |
+
+<a name="Alert+createCaseFromAlert"></a>
+
+### alert.createCaseFromAlert(alertId, title, description, severity, startDate, endDate, tags, flag, tlp, pap, status, summary, assignee, customFields, caseTemplate, tasks, pages, sharingParameters, taskRule, observableRule) ⇒ <code>Promise</code>
+Create a case from an alert
+
+**Kind**: instance method of [<code>Alert</code>](#Alert)  
+**Returns**: <code>Promise</code> - - A promise which resolves to the response body  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| alertId | <code>String</code> |  | The id of the alert to create the case from |
+| title | <code>String</code> | <code></code> | The title of the case |
+| description | <code>String</code> | <code></code> | The description of the case |
+| severity | <code>Number</code> | <code></code> | The severity of the case |
+| startDate | <code>Number</code> | <code></code> | The start date of the case |
+| endDate | <code>Number</code> | <code></code> | The end date of the case |
+| tags | <code>Array</code> | <code></code> | The tags of the case |
+| flag | <code>String</code> | <code></code> | The flag of the case |
+| tlp | <code>Number</code> | <code></code> | The TLP of the case |
+| pap | <code>Number</code> | <code></code> | The PAP of the case |
+| status | <code>String</code> | <code></code> | The status of the case |
+| summary | <code>String</code> | <code></code> | The summary of the case |
+| assignee | <code>String</code> | <code></code> | The assignee of the case |
+| customFields | <code>Object</code> | <code></code> | The custom fields of the case |
+| caseTemplate | <code>String</code> | <code></code> | The case template of the case |
+| tasks | <code>Array</code> | <code></code> | The tasks of the case |
+| pages | <code>Array</code> | <code></code> | The pages of the case |
+| sharingParameters | <code>Array</code> | <code></code> | The sharing parameters of the case |
+| taskRule | <code>String</code> | <code></code> | The task rule of the case |
+| observableRule | <code>String</code> | <code></code> | The observable rule of the case |
+
+<a name="Alert+followAlert"></a>
+
+### alert.followAlert(alertId) ⇒ <code>Promise</code>
+Follow an alert
+
+**Kind**: instance method of [<code>Alert</code>](#Alert)  
+**Returns**: <code>Promise</code> - - A promise which resolves to the response body  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| alertId | <code>String</code> | The id of the alert to follow |
+
+<a name="Alert+unfollowAlert"></a>
+
+### alert.unfollowAlert(alertId) ⇒ <code>Promise</code>
+Unfollow an alert
+
+**Kind**: instance method of [<code>Alert</code>](#Alert)  
+**Returns**: <code>Promise</code> - - A promise which resolves to the response body  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| alertId | <code>String</code> | The id of the alert to unfollow |
+
+<a name="Alert+mergeAlert"></a>
+
+### alert.mergeAlert(alertId, caseId) ⇒ <code>Promise</code>
+Merge an alert with a case
+
+**Kind**: instance method of [<code>Alert</code>](#Alert)  
+**Returns**: <code>Promise</code> - - A promise which resolves to the response body  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| alertId | <code>String</code> | The id of the alert to merge |
+| caseId | <code>String</code> | The id of the case to merge |
+
+<a name="Alert+mergeAlerts"></a>
+
+### alert.mergeAlerts(caseId, alertIds) ⇒ <code>Promise</code>
+Merge multiple alerts with a case
+
+**Kind**: instance method of [<code>Alert</code>](#Alert)  
+**Returns**: <code>Promise</code> - - A promise which resolves to the response body  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| caseId | <code>String</code> | The id of the case to merge |
+| alertIds | <code>Array</code> | The ids of the alerts to merge |
+
+<a name="Alert+deleteAlerts"></a>
+
+### alert.deleteAlerts(alertIds) ⇒ <code>Promise</code>
+Delete an alert in bulk
+
+**Kind**: instance method of [<code>Alert</code>](#Alert)  
+**Returns**: <code>Promise</code> - - A promise which resolves to the response body  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| alertIds | <code>Array</code> | The ids of the alerts to delete |
 
 <a name="Case"></a>
 
