@@ -1185,6 +1185,52 @@ This class is used to interact with the timeline API
 This class is used to interact with the TOTP API
 
 **Kind**: global class  
+
+* [TOTP](#TOTP)
+    * [.getSecret()](#TOTP+getSecret) ⇒ <code>Promise</code>
+    * [.setSecret(code, secret)](#TOTP+setSecret) ⇒ <code>Promise</code>
+    * [.unsetSecret()](#TOTP+unsetSecret) ⇒ <code>Promise</code>
+    * [.unsetSecretForUser(user)](#TOTP+unsetSecretForUser) ⇒ <code>Promise</code>
+
+<a name="TOTP+getSecret"></a>
+
+### totP.getSecret() ⇒ <code>Promise</code>
+Get TOTP secret
+
+**Kind**: instance method of [<code>TOTP</code>](#TOTP)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="TOTP+setSecret"></a>
+
+### totP.setSecret(code, secret) ⇒ <code>Promise</code>
+Set TOTP secret
+
+**Kind**: instance method of [<code>TOTP</code>](#TOTP)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| code | <code>string</code> | The code to set the secret |
+| secret | <code>string</code> | The secret to set |
+
+<a name="TOTP+unsetSecret"></a>
+
+### totP.unsetSecret() ⇒ <code>Promise</code>
+Unset TOTP secret
+
+**Kind**: instance method of [<code>TOTP</code>](#TOTP)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="TOTP+unsetSecretForUser"></a>
+
+### totP.unsetSecretForUser(user) ⇒ <code>Promise</code>
+Unset TOTP secret for user
+
+**Kind**: instance method of [<code>TOTP</code>](#TOTP)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| user | <code>string</code> | The email of userid of the user to unset the secret |
+
 <a name="Ttp"></a>
 
 ## Ttp
