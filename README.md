@@ -3136,6 +3136,98 @@ Unset TOTP secret for user
 This class is used to interact with the ttp API
 
 **Kind**: global class  
+
+* [Ttp](#Ttp)
+    * [.create(caseId, patterndId, occurDate, tactic, description)](#Ttp+create)
+    * [.createSeveral(caseId, procedures)](#Ttp+createSeveral) ⇒ <code>Promise</code>
+    * [.createAlert(alertId, patternId, occurDate, tactic, description)](#Ttp+createAlert) ⇒ <code>Promise</code>
+    * [.createSeveralAlert(alertId, procedures)](#Ttp+createSeveralAlert) ⇒ <code>Promise</code>
+    * [.delete(procedureId)](#Ttp+delete) ⇒ <code>Promise</code>
+    * [.update(procedureId, description, occurDate)](#Ttp+update) ⇒ <code>Promise</code>
+
+<a name="Ttp+create"></a>
+
+### ttp.create(caseId, patterndId, occurDate, tactic, description)
+Create procédure for case
+
+**Kind**: instance method of [<code>Ttp</code>](#Ttp)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| caseId | <code>string</code> | The id of the case |
+| patterndId | <code>string</code> | The id of the pattern |
+| occurDate | <code>string</code> | The date of the occurence |
+| tactic | <code>string</code> | The tactic |
+| description | <code>string</code> | The description |
+
+<a name="Ttp+createSeveral"></a>
+
+### ttp.createSeveral(caseId, procedures) ⇒ <code>Promise</code>
+Create several procedure for case
+
+**Kind**: instance method of [<code>Ttp</code>](#Ttp)  
+**Returns**: <code>Promise</code> - A promise that contains the created procedures  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| caseId | <code>string</code> | The id of the case |
+| procedures | <code>string</code> | The procedures |
+
+<a name="Ttp+createAlert"></a>
+
+### ttp.createAlert(alertId, patternId, occurDate, tactic, description) ⇒ <code>Promise</code>
+Create procedure for alert
+
+**Kind**: instance method of [<code>Ttp</code>](#Ttp)  
+**Returns**: <code>Promise</code> - A promise that contains the created procedure  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| alertId | <code>string</code> | The id of the alert |
+| patternId | <code>string</code> | The id of the pattern |
+| occurDate | <code>string</code> | The date of the occurence |
+| tactic | <code>string</code> | The tactic |
+| description | <code>string</code> | The description |
+
+<a name="Ttp+createSeveralAlert"></a>
+
+### ttp.createSeveralAlert(alertId, procedures) ⇒ <code>Promise</code>
+Create several procedure for alert
+
+**Kind**: instance method of [<code>Ttp</code>](#Ttp)  
+**Returns**: <code>Promise</code> - A promise that contains the created procedures  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| alertId | <code>string</code> | The id of the alert |
+| procedures | <code>string</code> | The procedures |
+
+<a name="Ttp+delete"></a>
+
+### ttp.delete(procedureId) ⇒ <code>Promise</code>
+delete procedure
+
+**Kind**: instance method of [<code>Ttp</code>](#Ttp)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted procedure  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| procedureId | <code>string</code> | The id of the procedure |
+
+<a name="Ttp+update"></a>
+
+### ttp.update(procedureId, description, occurDate) ⇒ <code>Promise</code>
+Update procedure
+
+**Kind**: instance method of [<code>Ttp</code>](#Ttp)  
+**Returns**: <code>Promise</code> - A promise that contains the updated procedure  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| procedureId | <code>string</code> | The id of the procedure |
+| description | <code>string</code> | The description |
+| occurDate | <code>string</code> | The date of the occurence |
+
 <a name="User"></a>
 
 ## User
