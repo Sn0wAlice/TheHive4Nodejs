@@ -1353,6 +1353,104 @@ This class is used to interact with the Organisation API
 This class is used to interact with the page API
 
 **Kind**: global class  
+
+* [Page](#Page)
+    * [.createPage(title, content, order, category)](#Page+createPage) ⇒ <code>Promise</code>
+    * [.deletePage(id)](#Page+deletePage) ⇒ <code>Promise</code>
+    * [.updatePage(id, title, content, order, category)](#Page+updatePage) ⇒ <code>Promise</code>
+    * [.createPageInCase(caseId, title, content, order, category)](#Page+createPageInCase) ⇒ <code>Promise</code>
+    * [.deletePageInCase(caseId, id)](#Page+deletePageInCase) ⇒ <code>Promise</code>
+    * [.updatePageInCase(caseId, id, title, content, order, category)](#Page+updatePageInCase) ⇒ <code>Promise</code>
+
+<a name="Page+createPage"></a>
+
+### page.createPage(title, content, order, category) ⇒ <code>Promise</code>
+Create page
+
+**Kind**: instance method of [<code>Page</code>](#Page)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | <code>string</code> |  | The title of the page |
+| content | <code>string</code> |  | The content of the page |
+| order | <code>string</code> | <code>null</code> | The order of the page |
+| category | <code>string</code> |  | The category of the page |
+
+<a name="Page+deletePage"></a>
+
+### page.deletePage(id) ⇒ <code>Promise</code>
+Delete page
+
+**Kind**: instance method of [<code>Page</code>](#Page)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the page |
+
+<a name="Page+updatePage"></a>
+
+### page.updatePage(id, title, content, order, category) ⇒ <code>Promise</code>
+Update page
+
+**Kind**: instance method of [<code>Page</code>](#Page)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the page |
+| title | <code>string</code> | <code>null</code> | The title of the page |
+| content | <code>string</code> | <code>null</code> | The content of the page |
+| order | <code>string</code> | <code>null</code> | The order of the page |
+| category | <code>string</code> | <code>null</code> | The category of the page |
+
+<a name="Page+createPageInCase"></a>
+
+### page.createPageInCase(caseId, title, content, order, category) ⇒ <code>Promise</code>
+Create a page in a case
+
+**Kind**: instance method of [<code>Page</code>](#Page)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| caseId | <code>string</code> |  | The id of the case |
+| title | <code>string</code> |  | The title of the page |
+| content | <code>string</code> |  | The content of the page |
+| order | <code>string</code> | <code>null</code> | The order of the page |
+| category | <code>string</code> |  | The category of the page |
+
+<a name="Page+deletePageInCase"></a>
+
+### page.deletePageInCase(caseId, id) ⇒ <code>Promise</code>
+Delete a page in a case
+
+**Kind**: instance method of [<code>Page</code>](#Page)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| caseId | <code>string</code> | The id of the case |
+| id | <code>string</code> | The id of the page |
+
+<a name="Page+updatePageInCase"></a>
+
+### page.updatePageInCase(caseId, id, title, content, order, category) ⇒ <code>Promise</code>
+Update a page in a case
+
+**Kind**: instance method of [<code>Page</code>](#Page)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| caseId | <code>string</code> |  | The id of the case |
+| id | <code>string</code> |  | The id of the page |
+| title | <code>string</code> | <code>null</code> | The title of the page |
+| content | <code>string</code> | <code>null</code> | The content of the page |
+| order | <code>string</code> | <code>null</code> | The order of the page |
+| category | <code>string</code> | <code>null</code> | The category of the page |
+
 <a name="PageTemplate"></a>
 
 ## PageTemplate
