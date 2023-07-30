@@ -2721,6 +2721,82 @@ Get platform status
 This class is used to interact with the task-log API
 
 **Kind**: global class  
+
+* [TaskLog](#TaskLog)
+    * [.create(taskId, message, startDate, includeInTimeline, attachments)](#TaskLog+create) ⇒ <code>Promise</code>
+    * [.delete(id)](#TaskLog+delete) ⇒ <code>Promise</code>
+    * [.update(id, message, includeInTimeline)](#TaskLog+update) ⇒ <code>Promise</code>
+    * [.addAttachments(id, attachments)](#TaskLog+addAttachments) ⇒ <code>Promise</code>
+    * [.deleteAttachment(id, attachmentid)](#TaskLog+deleteAttachment) ⇒ <code>Promise</code>
+
+<a name="TaskLog+create"></a>
+
+### taskLog.create(taskId, message, startDate, includeInTimeline, attachments) ⇒ <code>Promise</code>
+Create a new task-log
+
+**Kind**: instance method of [<code>TaskLog</code>](#TaskLog)  
+**Returns**: <code>Promise</code> - A promise that contains the created task-log  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| taskId | <code>string</code> | The id of the task-log |
+| message | <code>string</code> | The message of the task-log |
+| startDate | <code>string</code> | The start date of the task-log |
+| includeInTimeline | <code>string</code> | The includeInTimeline of the task-log |
+| attachments | <code>string</code> | The attachments of the task-log |
+
+<a name="TaskLog+delete"></a>
+
+### taskLog.delete(id) ⇒ <code>Promise</code>
+Delete task-log by id
+
+**Kind**: instance method of [<code>TaskLog</code>](#TaskLog)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted task-log  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the task-log |
+
+<a name="TaskLog+update"></a>
+
+### taskLog.update(id, message, includeInTimeline) ⇒ <code>Promise</code>
+Update task-log by id
+
+**Kind**: instance method of [<code>TaskLog</code>](#TaskLog)  
+**Returns**: <code>Promise</code> - A promise that contains the updated task-log  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the task-log |
+| message | <code>string</code> | <code>null</code> | The message of the task-log |
+| includeInTimeline | <code>string</code> | <code>null</code> | The includeInTimeline of the task-log |
+
+<a name="TaskLog+addAttachments"></a>
+
+### taskLog.addAttachments(id, attachments) ⇒ <code>Promise</code>
+Add attachments to task-log by id
+
+**Kind**: instance method of [<code>TaskLog</code>](#TaskLog)  
+**Returns**: <code>Promise</code> - A promise that contains the updated task-log  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the task-log |
+| attachments | <code>Array.&lt;string&gt;</code> | The attachments of the task-log |
+
+<a name="TaskLog+deleteAttachment"></a>
+
+### taskLog.deleteAttachment(id, attachmentid) ⇒ <code>Promise</code>
+Delete attachments from task-log by id
+
+**Kind**: instance method of [<code>TaskLog</code>](#TaskLog)  
+**Returns**: <code>Promise</code> - A promise that contains the updated task-log  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the task-log |
+| attachmentid | <code>string</code> | The attachmentid of the task-log |
+
 <a name="Task"></a>
 
 ## Task
