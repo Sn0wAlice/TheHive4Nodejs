@@ -2266,6 +2266,192 @@ Import case from MISP
 This class is used to interact with the observable API
 
 **Kind**: global class  
+
+* [Observable](#Observable)
+    * [.createCase(caseId, dataType, data, message, startDate, attachment, tlp, pap, tags, ioc, sighted, sightedAt, ignoreSimilarity, isZip, zipPassword)](#Observable+createCase) ⇒ <code>Promise</code>
+    * [.createAlert(alertId, dataType, data, message, startDate, attachment, tlp, pap, tags, ioc, sighted, sightedAt, ignoreSimilarity, isZip, zipPassword)](#Observable+createAlert) ⇒ <code>Promise</code>
+    * [.getById(observableId)](#Observable+getById) ⇒ <code>Promise</code>
+    * [.deleteById(observableId)](#Observable+deleteById) ⇒ <code>Promise</code>
+    * [.updateById(observableId, dataType, message, tlp, pap, tags, ioc, sighted, sightedAt, ignoreSimilarity, addTag, removeTag)](#Observable+updateById) ⇒ <code>Promise</code>
+    * [.updateById(observableIds, dataType, message, tlp, pap, tags, ioc, sighted, sightedAt, ignoreSimilarity, addTag, removeTag)](#Observable+updateById) ⇒ <code>Promise</code>
+    * [.downloadAttachment(observableId, attachmentId)](#Observable+downloadAttachment) ⇒ <code>Promise</code>
+    * [.listShare(observableId)](#Observable+listShare) ⇒ <code>Promise</code>
+    * [.share(observableId, organisationsId)](#Observable+share) ⇒ <code>Promise</code>
+    * [.unshare(observableId, organisationsId)](#Observable+unshare) ⇒ <code>Promise</code>
+
+<a name="Observable+createCase"></a>
+
+### observable.createCase(caseId, dataType, data, message, startDate, attachment, tlp, pap, tags, ioc, sighted, sightedAt, ignoreSimilarity, isZip, zipPassword) ⇒ <code>Promise</code>
+Create a new observable in case
+
+**Kind**: instance method of [<code>Observable</code>](#Observable)  
+**Returns**: <code>Promise</code> - A promise that contains the created observable  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| caseId | <code>string</code> |  | The id of the case |
+| dataType | <code>string</code> |  | The data type of the observable |
+| data | <code>string</code> | <code>null</code> | The data of the observable |
+| message | <code>string</code> | <code>null</code> | The message of the observable |
+| startDate | <code>string</code> | <code>null</code> | The start date of the observable |
+| attachment | <code>string</code> | <code>null</code> | The attachment of the observable |
+| tlp | <code>string</code> | <code>2</code> | The tlp of the observable |
+| pap | <code>string</code> | <code>2</code> | The pap of the observable |
+| tags | <code>string</code> |  | The tags of the observable |
+| ioc | <code>string</code> | <code>false</code> | The ioc of the observable |
+| sighted | <code>string</code> | <code>false</code> | The sighted of the observable |
+| sightedAt | <code>string</code> | <code>null</code> | The sighted at of the observable |
+| ignoreSimilarity | <code>string</code> | <code>false</code> | The ignore similarity of the observable |
+| isZip | <code>string</code> | <code>false</code> | The is zip of the observable ? |
+| zipPassword | <code>string</code> | <code>null</code> | The zip password of the observable |
+
+<a name="Observable+createAlert"></a>
+
+### observable.createAlert(alertId, dataType, data, message, startDate, attachment, tlp, pap, tags, ioc, sighted, sightedAt, ignoreSimilarity, isZip, zipPassword) ⇒ <code>Promise</code>
+Create a new observable in alert
+
+**Kind**: instance method of [<code>Observable</code>](#Observable)  
+**Returns**: <code>Promise</code> - A promise that contains the created observable  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| alertId | <code>string</code> |  | The id of the alert |
+| dataType | <code>string</code> |  | The data type of the observable |
+| data | <code>string</code> | <code>null</code> | The data of the observable |
+| message | <code>string</code> | <code>null</code> | The message of the observable |
+| startDate | <code>string</code> | <code>null</code> | The start date of the observable |
+| attachment | <code>string</code> | <code>null</code> | The attachment of the observable |
+| tlp | <code>string</code> | <code>2</code> | The tlp of the observable |
+| pap | <code>string</code> | <code>2</code> | The pap of the observable |
+| tags | <code>string</code> |  | The tags of the observable |
+| ioc | <code>string</code> | <code>false</code> | The ioc of the observable |
+| sighted | <code>string</code> | <code>false</code> | The sighted of the observable |
+| sightedAt | <code>string</code> | <code>null</code> | The sighted at of the observable |
+| ignoreSimilarity | <code>string</code> | <code>false</code> | The ignore similarity of the observable |
+| isZip | <code>string</code> | <code>false</code> | The is zip of the observable ? |
+| zipPassword | <code>string</code> | <code>null</code> | The zip password of the observable |
+
+<a name="Observable+getById"></a>
+
+### observable.getById(observableId) ⇒ <code>Promise</code>
+Get observable by id
+
+**Kind**: instance method of [<code>Observable</code>](#Observable)  
+**Returns**: <code>Promise</code> - A promise that contains the observable  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| observableId | <code>string</code> | The id of the observable |
+
+<a name="Observable+deleteById"></a>
+
+### observable.deleteById(observableId) ⇒ <code>Promise</code>
+Delete observable by id
+
+**Kind**: instance method of [<code>Observable</code>](#Observable)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted observable  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| observableId | <code>string</code> | The id of the observable |
+
+<a name="Observable+updateById"></a>
+
+### observable.updateById(observableId, dataType, message, tlp, pap, tags, ioc, sighted, sightedAt, ignoreSimilarity, addTag, removeTag) ⇒ <code>Promise</code>
+Update observable by id
+
+**Kind**: instance method of [<code>Observable</code>](#Observable)  
+**Returns**: <code>Promise</code> - A promise that contains the updated observable  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| observableId | <code>string</code> |  | The id of the observable |
+| dataType | <code>string</code> | <code>null</code> | The data type of the observable |
+| message | <code>string</code> | <code>null</code> | The message of the observable |
+| tlp | <code>string</code> | <code>null</code> | The tlp of the observable |
+| pap | <code>string</code> | <code>null</code> | The pap of the observable |
+| tags | <code>string</code> | <code>null</code> | The tags of the observable |
+| ioc | <code>string</code> | <code>null</code> | The ioc of the observable |
+| sighted | <code>string</code> | <code>null</code> | The sighted of the observable |
+| sightedAt | <code>string</code> | <code>null</code> | The sighted at of the observable |
+| ignoreSimilarity | <code>string</code> | <code>null</code> | The ignore similarity of the observable |
+| addTag | <code>string</code> |  | The tag to add to the observable |
+| removeTag | <code>string</code> |  | The tag to remove from the observable |
+
+<a name="Observable+updateById"></a>
+
+### observable.updateById(observableIds, dataType, message, tlp, pap, tags, ioc, sighted, sightedAt, ignoreSimilarity, addTag, removeTag) ⇒ <code>Promise</code>
+Update bulk observable by ids
+
+**Kind**: instance method of [<code>Observable</code>](#Observable)  
+**Returns**: <code>Promise</code> - A promise that contains the updated observable  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| observableIds | <code>string</code> | The ids of the observables |
+| dataType | <code>string</code> | The data type of the observable |
+| message | <code>string</code> | The message of the observable |
+| tlp | <code>string</code> | The tlp of the observable |
+| pap | <code>string</code> | The pap of the observable |
+| tags | <code>string</code> | The tags of the observable |
+| ioc | <code>string</code> | The ioc of the observable |
+| sighted | <code>string</code> | The sighted of the observable |
+| sightedAt | <code>string</code> | The sighted at of the observable |
+| ignoreSimilarity | <code>string</code> | The ignore similarity of the observable |
+| addTag | <code>string</code> | The tag to add to the observable |
+| removeTag | <code>string</code> | The tag to remove from the observable |
+
+<a name="Observable+downloadAttachment"></a>
+
+### observable.downloadAttachment(observableId, attachmentId) ⇒ <code>Promise</code>
+Download attachment from observable
+
+**Kind**: instance method of [<code>Observable</code>](#Observable)  
+**Returns**: <code>Promise</code> - A promise that contains the attachment  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| observableId | <code>string</code> | The id of the observable |
+| attachmentId | <code>string</code> | The id of the attachment |
+
+<a name="Observable+listShare"></a>
+
+### observable.listShare(observableId) ⇒ <code>Promise</code>
+List share of observable
+
+**Kind**: instance method of [<code>Observable</code>](#Observable)  
+**Returns**: <code>Promise</code> - A promise that contains the list of shares  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| observableId | <code>string</code> | The id of the observable |
+
+<a name="Observable+share"></a>
+
+### observable.share(observableId, organisationsId) ⇒ <code>Promise</code>
+Share an observable
+
+**Kind**: instance method of [<code>Observable</code>](#Observable)  
+**Returns**: <code>Promise</code> - A promise that contains the list of shares  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| observableId | <code>string</code> | The id of the observable |
+| organisationsId | <code>Array.&lt;string&gt;</code> | The id of the organisations |
+
+<a name="Observable+unshare"></a>
+
+### observable.unshare(observableId, organisationsId) ⇒ <code>Promise</code>
+Unshare an observable
+
+**Kind**: instance method of [<code>Observable</code>](#Observable)  
+**Returns**: <code>Promise</code> - A promise that contains the list of shares  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| observableId | <code>string</code> | The id of the observable |
+| organisationsId | <code>Array.&lt;string&gt;</code> | The id of the organisations |
+
 <a name="ObservableType"></a>
 
 ## ObservableType
