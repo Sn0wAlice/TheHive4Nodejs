@@ -1130,6 +1130,51 @@ This class is used to interact with the license API
 This class is used to interact with the Log API
 
 **Kind**: global class  
+
+* [Log](#Log)
+    * [.downloadAttachment(id, attachmentId)](#Log+downloadAttachment) ⇒ <code>Promise</code>
+    * [.getAttachment(caseId, attachmentId)](#Log+getAttachment) ⇒ <code>Promise</code>
+    * [.getAttachmentsFromObservable(observableId, attachmentId)](#Log+getAttachmentsFromObservable) ⇒ <code>Promise</code>
+
+<a name="Log+downloadAttachment"></a>
+
+### log.downloadAttachment(id, attachmentId) ⇒ <code>Promise</code>
+Download attachments from log
+
+**Kind**: instance method of [<code>Log</code>](#Log)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the log |
+| attachmentId | <code>string</code> | The id of the attachment |
+
+<a name="Log+getAttachment"></a>
+
+### log.getAttachment(caseId, attachmentId) ⇒ <code>Promise</code>
+Get Attachment from log
+
+**Kind**: instance method of [<code>Log</code>](#Log)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| caseId | <code>string</code> | The id of the case |
+| attachmentId | <code>string</code> | The id of the attachment |
+
+<a name="Log+getAttachmentsFromObservable"></a>
+
+### log.getAttachmentsFromObservable(observableId, attachmentId) ⇒ <code>Promise</code>
+Get attachments from observable
+
+**Kind**: instance method of [<code>Log</code>](#Log)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| observableId | <code>string</code> | The id of the observable |
+| attachmentId | <code>string</code> | The id of the attachment |
+
 <a name="Login"></a>
 
 ## Login
