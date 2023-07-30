@@ -2755,6 +2755,191 @@ This class is used to interact with the ttp API
 This class is used to interact with the User API
 
 **Kind**: global class  
+
+* [User](#User)
+    * [.get()](#User+get) ⇒ <code>Promise</code>
+    * [.create(login, name, email, password, profile, organisation, type)](#User+create) ⇒ <code>Promise</code>
+    * [.get(id)](#User+get) ⇒ <code>Promise</code>
+    * [.lock(id)](#User+lock) ⇒ <code>Promise</code>
+    * [.update(id, name, organisation, profile, locked, avatar, email, defaultOrganisation, type)](#User+update) ⇒ <code>Promise</code>
+    * [.delete(id)](#User+delete) ⇒ <code>Promise</code>
+    * [.setOrganisations(id, organisations)](#User+setOrganisations) ⇒ <code>Promise</code>
+    * [.setPassword(id, password)](#User+setPassword) ⇒ <code>Promise</code>
+    * [.changePassword(id, oldPassword, newPassword)](#User+changePassword) ⇒ <code>Promise</code>
+    * [.getApiKeys(id)](#User+getApiKeys) ⇒ <code>Promise</code>
+    * [.removeApiKey(id)](#User+removeApiKey) ⇒ <code>Promise</code>
+    * [.renewApiKey(id)](#User+renewApiKey) ⇒ <code>Promise</code>
+    * [.getAvatar(id)](#User+getAvatar) ⇒ <code>Promise</code>
+
+<a name="User+get"></a>
+
+### user.get() ⇒ <code>Promise</code>
+Get current user info
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the user info  
+<a name="User+create"></a>
+
+### user.create(login, name, email, password, profile, organisation, type) ⇒ <code>Promise</code>
+Create a new user
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the created user  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| login | <code>string</code> |  | The login of the user |
+| name | <code>string</code> |  | The name of the user |
+| email | <code>string</code> | <code>null</code> | The email of the user |
+| password | <code>string</code> |  | The password of the user |
+| profile | <code>string</code> |  | The profile of the user |
+| organisation | <code>string</code> | <code>null</code> | The organisation of the user |
+| type | <code>string</code> |  | The type of the user |
+
+<a name="User+get"></a>
+
+### user.get(id) ⇒ <code>Promise</code>
+Get user by id
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the user  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the user |
+
+<a name="User+lock"></a>
+
+### user.lock(id) ⇒ <code>Promise</code>
+Lock an user by id
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the locked user  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the user |
+
+<a name="User+update"></a>
+
+### user.update(id, name, organisation, profile, locked, avatar, email, defaultOrganisation, type) ⇒ <code>Promise</code>
+Update an user by id
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the updated user  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | <code>string</code> |  | The id of the user |
+| name | <code>string</code> | <code>null</code> | The name of the user |
+| organisation | <code>string</code> | <code>null</code> | The organisation of the user |
+| profile | <code>string</code> | <code>null</code> | The profile of the user |
+| locked | <code>string</code> | <code>null</code> | The locked status of the user |
+| avatar | <code>string</code> | <code>null</code> | The avatar of the user |
+| email | <code>string</code> | <code>null</code> | The email of the user |
+| defaultOrganisation | <code>string</code> | <code>null</code> | The default organisation of the user |
+| type | <code>string</code> | <code>null</code> | The default profile of the user |
+
+<a name="User+delete"></a>
+
+### user.delete(id) ⇒ <code>Promise</code>
+Delete an user by id
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted user  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the user |
+
+<a name="User+setOrganisations"></a>
+
+### user.setOrganisations(id, organisations) ⇒ <code>Promise</code>
+Set user organisation
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the updated user  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the user |
+| organisations | <code>Array.&lt;string&gt;</code> | The organisations of the user |
+
+<a name="User+setPassword"></a>
+
+### user.setPassword(id, password) ⇒ <code>Promise</code>
+Set user password
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the updated user  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the user |
+| password | <code>string</code> | The password of the user |
+
+<a name="User+changePassword"></a>
+
+### user.changePassword(id, oldPassword, newPassword) ⇒ <code>Promise</code>
+Change user password
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the updated user  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the user |
+| oldPassword | <code>string</code> | The old password of the user |
+| newPassword | <code>string</code> | The new password of the user |
+
+<a name="User+getApiKeys"></a>
+
+### user.getApiKeys(id) ⇒ <code>Promise</code>
+Get user api keys
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the api keys of the user  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the user |
+
+<a name="User+removeApiKey"></a>
+
+### user.removeApiKey(id) ⇒ <code>Promise</code>
+Remove user api key
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the api keys of the user  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the user |
+
+<a name="User+renewApiKey"></a>
+
+### user.renewApiKey(id) ⇒ <code>Promise</code>
+Renew user api key
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the api keys of the user  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the user |
+
+<a name="User+getAvatar"></a>
+
+### user.getAvatar(id) ⇒ <code>Promise</code>
+Get user avatar
+
+**Kind**: instance method of [<code>User</code>](#User)  
+**Returns**: <code>Promise</code> - A promise that contains the avatar of the user  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the user |
+
 <a name="query"></a>
 
 ## query(query)
