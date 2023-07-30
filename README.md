@@ -2660,6 +2660,36 @@ Update a profile
 This class is used to interact with the share API
 
 **Kind**: global class  
+
+* [Share](#Share)
+    * [.update(id, profile)](#Share+update) ⇒ <code>Promise</code>
+    * [.delete(ids)](#Share+delete) ⇒ <code>Promise</code>
+
+<a name="Share+update"></a>
+
+### share.update(id, profile) ⇒ <code>Promise</code>
+update share
+
+**Kind**: instance method of [<code>Share</code>](#Share)  
+**Returns**: <code>Promise</code> - A promise that contains the updated share  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the share |
+| profile | <code>string</code> | The id of the profile |
+
+<a name="Share+delete"></a>
+
+### share.delete(ids) ⇒ <code>Promise</code>
+delete share by id
+
+**Kind**: instance method of [<code>Share</code>](#Share)  
+**Returns**: <code>Promise</code> - A promise that contains the deleted share  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ids | <code>string</code> | The ids of the share |
+
 <a name="Status"></a>
 
 ## Status
