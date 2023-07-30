@@ -1224,6 +1224,72 @@ This class is used to interact with the function API
 This class is used to interact with the license API
 
 **Kind**: global class  
+
+* [License](#License)
+    * [.getCurrentLicense()](#License+getCurrentLicense) ⇒ <code>Promise</code>
+    * [.getLicense(id)](#License+getLicense) ⇒ <code>Promise</code>
+    * [.getAllLicenses()](#License+getAllLicenses) ⇒ <code>Promise</code>
+    * [.addLicense(license)](#License+addLicense) ⇒ <code>Promise</code>
+    * [.activateLicense(id)](#License+activateLicense) ⇒ <code>Promise</code>
+    * [.getChallenge()](#License+getChallenge) ⇒ <code>Promise</code>
+
+<a name="License+getCurrentLicense"></a>
+
+### license.getCurrentLicense() ⇒ <code>Promise</code>
+Get Current License
+
+**Kind**: instance method of [<code>License</code>](#License)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="License+getLicense"></a>
+
+### license.getLicense(id) ⇒ <code>Promise</code>
+Get License
+
+**Kind**: instance method of [<code>License</code>](#License)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the license |
+
+<a name="License+getAllLicenses"></a>
+
+### license.getAllLicenses() ⇒ <code>Promise</code>
+Get all licenses
+
+**Kind**: instance method of [<code>License</code>](#License)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="License+addLicense"></a>
+
+### license.addLicense(license) ⇒ <code>Promise</code>
+Add license & activate
+
+**Kind**: instance method of [<code>License</code>](#License)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| license | <code>string</code> | The license to add |
+
+<a name="License+activateLicense"></a>
+
+### license.activateLicense(id) ⇒ <code>Promise</code>
+Activate license
+
+**Kind**: instance method of [<code>License</code>](#License)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the license |
+
+<a name="License+getChallenge"></a>
+
+### license.getChallenge() ⇒ <code>Promise</code>
+Get challenge
+
+**Kind**: instance method of [<code>License</code>](#License)  
+**Returns**: <code>Promise</code> - The response of the request  
 <a name="Log"></a>
 
 ## Log
