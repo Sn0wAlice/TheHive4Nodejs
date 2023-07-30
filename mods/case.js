@@ -3,7 +3,33 @@ const fetchInstance = fetch.getInstance()
 
 const checks = require('../utils/checks.js')
 
-const classCase = class {
+/**
+ * This class is used to interact with the case API
+ */
+const Case = class {
+    /**
+     * This function is used to create a new case
+     * @param {string} title The title of the case
+     * @param {string} description The description of the case
+     * @param {number} severity The severity of the case
+     * @param {number} startDate The start date of the case
+     * @param {number} endDate The end date of the case
+     * @param {string[]} tags The tags of the case
+     * @param {boolean} flag The flag of the case
+     * @param {number} tlp The tlp of the case
+     * @param {number} pap The pap of the case
+     * @param {string} status The status of the case
+     * @param {string} summary The summary of the case
+     * @param {string} assignee The assignee of the case
+     * @param {object[]} customFields The custom fields of the case
+     * @param {string} caseTemplate The case template of the case
+     * @param {object[]} tasks The tasks of the case
+     * @param {object[]} pages The pages of the case
+     * @param {object[]} sharingParameters The sharing parameters of the case
+     * @param {string} taskRule The task rule of the case
+     * @param {string} observableRule The observable rule of the case
+     * @returns {Promise<object>} The response of the request
+     */
     async create(
         title, 
         description,
@@ -100,6 +126,11 @@ const classCase = class {
         return await fetchInstance.post('/api/v1/case', body)
     }
 
+    /**
+     * This function is used to get a case
+     * @param {string} id The id of the case
+     * @returns {Promise<object>} The response of the request
+     */
     async get(id) {
         // Step 1 check if the id is valid
         if(!id.startsWith("~")) {
@@ -110,6 +141,11 @@ const classCase = class {
         return await fetchInstance.get(`/api/v1/case/${id}`)
     }
 
+    /**
+     * This function is used to delete a case
+     * @param {string} id The id of the case
+     * @returns {Promise<object>} The response of the request
+     */
     async delete(id) {
         // Step 1 check if the id is valid
         if(!id.startsWith("~")) {
@@ -120,6 +156,29 @@ const classCase = class {
         return await fetchInstance.delete(`/api/v1/case/${id}`)
     }
 
+    /**
+     * This function is used to update a case
+     * @param {string} id The id of the case
+     * @param {string} title The title of the case
+     * @param {string} description The description of the case
+     * @param {number} severity The severity of the case
+     * @param {number} startDate The start date of the case
+     * @param {number} endDate The end date of the case 
+     * @param {string[]} tags The tags of the case
+     * @param {boolean} flag The flag of the case
+     * @param {number} tlp The tlp of the case
+     * @param {number} pap The pap of the case
+     * @param {string} status The status of the case
+     * @param {string} summary The summary of the case
+     * @param {string} assignee The assignee of the case
+     * @param {string} impactStatus The impact status of the case
+     * @param {object[]} customFields The custom fields of the case
+     * @param {string} taskRule The task rule of the case
+     * @param {string} observableRule The observable rule of the case
+     * @param {string[]} addTags The tags to add to the case
+     * @param {string[]} removeTags The tags to remove from the case
+     * @returns {Promise<object>} The response of the request
+     */
     async update(
         id,
         title = "", 
@@ -235,6 +294,29 @@ const classCase = class {
         return await fetchInstance.patch(`/api/v1/case/${id}`, body)
     }
 
+    /**
+     * Bulk update cases
+     * @param {string[]} ids The ids of the cases to update
+     * @param {string} title The title of the case
+     * @param {string} description The description of the case
+     * @param {number} severity The severity of the case
+     * @param {number} startDate The start date of the case
+     * @param {number} endDate The end date of the case
+     * @param {string[]} tags The tags of the case
+     * @param {boolean} flag The flag of the case
+     * @param {number} tlp The tlp of the case
+     * @param {number} pap The pap of the case
+     * @param {string} status The status of the case
+     * @param {string} summary The summary of the case
+     * @param {string} assignee The assignee of the case
+     * @param {string} impactStatus The impact status of the case
+     * @param {object[]} customFields The custom fields of the case
+     * @param {string} taskRule The task rule of the case
+     * @param {string} observableRule The observable rule of the case
+     * @param {string[]} addTags The tags to add to the case
+     * @param {string[]} removeTags The tags to remove from the case
+     * @returns {Promise<object>} The response body
+     */
     async bulkUpdate(
         ids,
         title = "", 
@@ -295,6 +377,11 @@ const classCase = class {
         return stack
     }
 
+    /**
+     * merge cases
+     * @param {string} id The id of the case
+     * @returns {Promise<object>} The response body
+     */
     async merge(
         ids
     ) {
@@ -309,6 +396,12 @@ const classCase = class {
         return await fetchInstance.post(`/api/v1/case/_merge/${ids.join(",")}`)
     }
 
+    /**
+     * unlink an alert from a case
+     * @param {string} id The id of the case
+     * @param {string} alertId The id of the alert
+     * @returns {Promise<object>} The response body
+     */
     async unlinkAlert(
         caseId,
         alertId
@@ -327,6 +420,11 @@ const classCase = class {
         return await fetchInstance.delete(`/api/v1/case/${caseId}/alert/${alertId}`)
     }
 
+    /**
+     * merge similar observables in a case
+     * @param {string} id The id of the case
+     * @returns {Promise<object>} The response body
+     */
     async mergeSimilarObservables(
         caseId,
     ) {
@@ -339,6 +437,11 @@ const classCase = class {
         return await fetchInstance.post(`/api/v1/case/${caseId}/observable/_merge`)
     }
 
+    /** 
+     * get the linked cases of a case
+     * @param {string} id The id of the case
+     * @returns {Promise<object>} The response body
+     */
     async getLinkedCases(
         caseId,
     ) {
@@ -351,6 +454,11 @@ const classCase = class {
         return await fetchInstance.get(`/api/v1/case/${caseId}/links`)
     }
 
+    /**
+     * delete a custom field
+     * @param {string} id The id of the custom field
+     * @returns {Promise<object>} The response body
+     */
     async deleteCustomField(
         cfId
     ) {
@@ -363,6 +471,11 @@ const classCase = class {
         return await fetchInstance.delete(`/api/v1/case/customField/${cfId}`)
     }
 
+    /**
+     * import a new case from a file
+     * @param {string} _jsonFile The json file of the case
+     * @param {string} file The file of the case
+     */
     async importCaseFromFile(
         _jsonFile,
         file
@@ -379,6 +492,11 @@ const classCase = class {
         })
     }
 
+    /**
+     * export a case as an archive
+     * @param {string} id The id of the case
+     * @param {string} archivePassword The password of the archive (default: alice)
+     */
     async exportCaseAsArchive(
         caseId,
         archivePassword = "alice"
@@ -394,6 +512,22 @@ const classCase = class {
         })
     }
 
+    /**
+     * apply a case template on an existing case
+     * @param {string} id The id of the case
+     * @param {string} caseTemplate The case template
+     * @param {boolean} updateTitlePrefix Update the title prefix
+     * @param {boolean} updateDescription Update the description
+     * @param {boolean} updateTags Update the tags
+     * @param {boolean} updateSeverity Update the severity
+     * @param {boolean} updateFlag Update the flag
+     * @param {boolean} updateTlp Update the tlp
+     * @param {boolean} updatePap Update the pap
+     * @param {boolean} updateCustomFields Update the custom fields
+     * @param {boolean} importTasks Import the tasks
+     * @param {boolean} importPages Import the pages
+     * @returns {Promise<object>} The response body
+     */
     async ApplyCaseTemplateOnExistingCase(
         ids,
         caseTemplate,
@@ -436,6 +570,15 @@ const classCase = class {
         return await fetchInstance.post(`/api/v1/case/_bulk/caseTemplate`, body)
     }
 
+    /**
+     * change the owning org of a case
+     * @param {string} id The id of the case
+     * @param {string} organisation The organisation
+     * @param {string} keepProfile Keep the profile
+     * @param {string} taskRule The task rule
+     * @param {string} observableRule The observable rule
+     * @returns {Promise<object>} The response body
+     */
     async changeCaseOwningOrg(
         caseId,
         organisation,
@@ -460,6 +603,11 @@ const classCase = class {
         return await fetchInstance.post(`/api/v1/case/${caseId}/owner`, body)
     }
 
+    /**
+     * get the timeline of a case
+     * @param {string} id The id of the case
+     * @returns {Promise<object>} The response body
+     */
     async getCaseTimeline(
         caseId,
     ) {
@@ -472,6 +620,12 @@ const classCase = class {
         return await fetchInstance.get(`/api/v1/case/${caseId}/timeline`)
     }
 
+    /**
+     * add new attachments to a case
+     * @param {string} id The id of the case
+     * @param {any[]} attachments The attachments to add
+     * @param {boolean} canRename Can rename (if the attachment already exists)
+     */
     async addAttachmentToCase(
         caseId,
         attachments,
@@ -492,6 +646,12 @@ const classCase = class {
         return await fetchInstance.post(`/api/v1/case/${caseId}/attachments`, body)
     }
 
+    /**
+     * get an attachment from a case
+     * @param {string} id The id of the case
+     * @param {string} attachmentId The id of the attachment
+     * @returns {Promise<object>} The response body
+     */
     async downloadAttachment(
         caseId,
         attachmentId,
@@ -509,6 +669,12 @@ const classCase = class {
         return await fetchInstance.get(`/api/v1/case/${caseId}/attachment/${attachmentId}`)
     }
 
+    /**
+     * get an attachment from a case
+     * @param {string} id The id of the case
+     * @param {string} attachmentId The id of the attachment
+     * @returns {Promise<object>} The response body
+     */
     async getAttachmentFromCase(
         caseId,
         attachmentId,
@@ -526,6 +692,12 @@ const classCase = class {
         return await fetchInstance.get(`/api/v1/case/${caseId}/attachment/${attachmentId}`)
     }
 
+    /**
+     * delete an attachment from a case
+     * @param {string} id The id of the case
+     * @param {string} attachmentId The id of the attachment
+     * @returns {Promise<object>} The response body
+     */
     async deleteAttachmentFromCase(
         caseId,
         attachmentId,
@@ -543,6 +715,11 @@ const classCase = class {
         return await fetchInstance.delete(`/api/v1/case/${caseId}/attachment/${attachmentId}`)
     }
 
+    /**
+     * get the shares of a case
+     * @param {string} id The id of the case
+     * @returns {Promise<object>} The response body
+     */
     async listSharesOfCase(
         caseId,
     ) {
@@ -555,6 +732,12 @@ const classCase = class {
         return await fetchInstance.get(`/api/v1/case/${caseId}/shares`)
     }
     
+    /**
+     * set the shares of a case
+     * @param {string} id The id of the case
+     * @param {object[]} shares The shares
+     * @returns {Promise<object>} The response body
+     */
     async setSharesOfCase(
         caseId,
         shares,
@@ -573,6 +756,12 @@ const classCase = class {
         return await fetchInstance.put(`/api/v1/case/${caseId}/shares`, body)
     }
 
+    /**
+     * share a case
+     * @param {string} id The id of the case
+     * @param {object[]} shares The shares
+     * @returns {Promise<object>} The response body
+     */
     async shareACase(
         caseId,
         shares,
@@ -591,6 +780,12 @@ const classCase = class {
         return await fetchInstance.post(`/api/v1/case/${caseId}/shares`, body)
     }
 
+    /**
+     * unshare a case
+     * @param {string} id The id of the case
+     * @param {object[]} shares The shares
+     * @returns {Promise<object>} The response body
+     */
     async unshareACase(
         caseId,
         organisations,
@@ -609,6 +804,11 @@ const classCase = class {
         return await fetchInstance.delete(`/api/v1/case/${caseId}/shares`, body)
     }
 
+    /**
+     * get the shares of a case
+     * @param {string} id The id of the case
+     * @returns {Promise<object>} The response body
+     */
     async removeShareFromCase(
         shareId,
     ) {
@@ -622,4 +822,4 @@ const classCase = class {
     }
 }
 
-module.exports.case = new classCase()
+module.exports.case = new Case()

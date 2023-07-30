@@ -21,5 +21,8 @@
   "homepage": "https://github.com/Sn0wAlice/TheHive4Nodejs#readme",
   "dependencies": {
     "node-fetch": "^2.6.12"
+  },
+  "devDependencies": {
+    "jsdoc-to-markdown": "^8.0.0"
   }
 }
