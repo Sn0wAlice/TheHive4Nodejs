@@ -9,14 +9,107 @@ Nodejs module to interact with your TheHive5 instance
 ## Classes
 
 <dl>
+<dt><a href="#Admin">Admin</a></dt>
+<dd><p>This class is used to interact with the Admin API</p>
+</dd>
 <dt><a href="#Alert">Alert</a></dt>
 <dd><p>Alert class to manage alerts</p>
+</dd>
+<dt><a href="#Alertstatus">Alertstatus</a></dt>
+<dd><p>This class is used to interact with the alertstatus API</p>
+</dd>
+<dt><a href="#Attack">Attack</a></dt>
+<dd><p>This class is used to interact with the Attack API</p>
+</dd>
+<dt><a href="#CaseReport">CaseReport</a></dt>
+<dd><p>This class is used to interact with the case-report API</p>
 </dd>
 <dt><a href="#Case">Case</a></dt>
 <dd><p>This class is used to interact with the case API</p>
 </dd>
+<dt><a href="#CaseReportTemplate">CaseReportTemplate</a></dt>
+<dd><p>This class is used to interact with the CaseReportTemplate API</p>
+</dd>
+<dt><a href="#Casestatus">Casestatus</a></dt>
+<dd><p>This class is used to interact with the casestatus API</p>
+</dd>
+<dt><a href="#CaseTemplate">CaseTemplate</a></dt>
+<dd><p>This class is used to interact with the CaseTemplate API</p>
+</dd>
+<dt><a href="#Comment">Comment</a></dt>
+<dd><p>This class is used to interact with the comment API</p>
+</dd>
+<dt><a href="#Cortex">Cortex</a></dt>
+<dd><p>This class is used to interact with the Cortex API</p>
+</dd>
+<dt><a href="#Customfield">Customfield</a></dt>
+<dd><p>This class is used to interact with the customfield API</p>
+</dd>
+<dt><a href="#Dashboard">Dashboard</a></dt>
+<dd><p>This class is used to interact with the Dashboard API</p>
+</dd>
+<dt><a href="#Describe">Describe</a></dt>
+<dd><p>This class is used to interact with the Describe API</p>
+</dd>
+<dt><a href="#Function">Function</a></dt>
+<dd><p>This class is used to interact with the function API</p>
+</dd>
+<dt><a href="#License">License</a></dt>
+<dd><p>This class is used to interact with the license API</p>
+</dd>
+<dt><a href="#Log">Log</a></dt>
+<dd><p>This class is used to interact with the Log API</p>
+</dd>
+<dt><a href="#Login">Login</a></dt>
+<dd><p>This class is used to interact with the Login API</p>
+</dd>
+<dt><a href="#MISP">MISP</a></dt>
+<dd><p>This class is used to interact with the MISP API</p>
+</dd>
+<dt><a href="#Observable">Observable</a></dt>
+<dd><p>This class is used to interact with the observable API</p>
+</dd>
+<dt><a href="#ObservableType">ObservableType</a></dt>
+<dd><p>This class is used to interact with the ObservableType API</p>
+</dd>
+<dt><a href="#Organisation">Organisation</a></dt>
+<dd><p>This class is used to interact with the Organisation API</p>
+</dd>
+<dt><a href="#Page">Page</a></dt>
+<dd><p>This class is used to interact with the page API</p>
+</dd>
+<dt><a href="#PageTemplate">PageTemplate</a></dt>
+<dd><p>This class is used to interact with the PageTemplate API</p>
+</dd>
+<dt><a href="#Profile">Profile</a></dt>
+<dd><p>This class is used to interact with the Profile API</p>
+</dd>
+<dt><a href="#Share">Share</a></dt>
+<dd><p>This class is used to interact with the share API</p>
+</dd>
+<dt><a href="#Status">Status</a></dt>
+<dd><p>This class is used to interact with the Status API</p>
+</dd>
+<dt><a href="#TaskLog">TaskLog</a></dt>
+<dd><p>This class is used to interact with the task-log API</p>
+</dd>
 <dt><a href="#Task">Task</a></dt>
 <dd><p>This class is used to interact with the Task API</p>
+</dd>
+<dt><a href="#Taxonomy">Taxonomy</a></dt>
+<dd><p>This class is used to interact with the Taxonomy API</p>
+</dd>
+<dt><a href="#Timeline">Timeline</a></dt>
+<dd><p>This class is used to interact with the timeline API</p>
+</dd>
+<dt><a href="#TOTP">TOTP</a></dt>
+<dd><p>This class is used to interact with the TOTP API</p>
+</dd>
+<dt><a href="#Ttp">Ttp</a></dt>
+<dd><p>This class is used to interact with the ttp API</p>
+</dd>
+<dt><a href="#User">User</a></dt>
+<dd><p>This class is used to interact with the User API</p>
 </dd>
 </dl>
 
@@ -28,6 +121,12 @@ Nodejs module to interact with your TheHive5 instance
 </dd>
 </dl>
 
+<a name="Admin"></a>
+
+## Admin
+This class is used to interact with the Admin API
+
+**Kind**: global class  
 <a name="Alert"></a>
 
 ## Alert
@@ -257,6 +356,24 @@ Delete an alert in bulk
 | --- | --- | --- |
 | alertIds | <code>Array</code> | The ids of the alerts to delete |
 
+<a name="Alertstatus"></a>
+
+## Alertstatus
+This class is used to interact with the alertstatus API
+
+**Kind**: global class  
+<a name="Attack"></a>
+
+## Attack
+This class is used to interact with the Attack API
+
+**Kind**: global class  
+<a name="CaseReport"></a>
+
+## CaseReport
+This class is used to interact with the case-report API
+
+**Kind**: global class  
 <a name="Case"></a>
 
 ## Case
@@ -655,6 +772,138 @@ get the shares of a case
 | --- | --- | --- |
 | id | <code>string</code> | The id of the case |
 
+<a name="CaseReportTemplate"></a>
+
+## CaseReportTemplate
+This class is used to interact with the CaseReportTemplate API
+
+**Kind**: global class  
+<a name="Casestatus"></a>
+
+## Casestatus
+This class is used to interact with the casestatus API
+
+**Kind**: global class  
+<a name="CaseTemplate"></a>
+
+## CaseTemplate
+This class is used to interact with the CaseTemplate API
+
+**Kind**: global class  
+<a name="Comment"></a>
+
+## Comment
+This class is used to interact with the comment API
+
+**Kind**: global class  
+<a name="Cortex"></a>
+
+## Cortex
+This class is used to interact with the Cortex API
+
+**Kind**: global class  
+<a name="Customfield"></a>
+
+## Customfield
+This class is used to interact with the customfield API
+
+**Kind**: global class  
+<a name="Dashboard"></a>
+
+## Dashboard
+This class is used to interact with the Dashboard API
+
+**Kind**: global class  
+<a name="Describe"></a>
+
+## Describe
+This class is used to interact with the Describe API
+
+**Kind**: global class  
+<a name="Function"></a>
+
+## Function
+This class is used to interact with the function API
+
+**Kind**: global class  
+<a name="License"></a>
+
+## License
+This class is used to interact with the license API
+
+**Kind**: global class  
+<a name="Log"></a>
+
+## Log
+This class is used to interact with the Log API
+
+**Kind**: global class  
+<a name="Login"></a>
+
+## Login
+This class is used to interact with the Login API
+
+**Kind**: global class  
+<a name="MISP"></a>
+
+## MISP
+This class is used to interact with the MISP API
+
+**Kind**: global class  
+<a name="Observable"></a>
+
+## Observable
+This class is used to interact with the observable API
+
+**Kind**: global class  
+<a name="ObservableType"></a>
+
+## ObservableType
+This class is used to interact with the ObservableType API
+
+**Kind**: global class  
+<a name="Organisation"></a>
+
+## Organisation
+This class is used to interact with the Organisation API
+
+**Kind**: global class  
+<a name="Page"></a>
+
+## Page
+This class is used to interact with the page API
+
+**Kind**: global class  
+<a name="PageTemplate"></a>
+
+## PageTemplate
+This class is used to interact with the PageTemplate API
+
+**Kind**: global class  
+<a name="Profile"></a>
+
+## Profile
+This class is used to interact with the Profile API
+
+**Kind**: global class  
+<a name="Share"></a>
+
+## Share
+This class is used to interact with the share API
+
+**Kind**: global class  
+<a name="Status"></a>
+
+## Status
+This class is used to interact with the Status API
+
+**Kind**: global class  
+<a name="TaskLog"></a>
+
+## TaskLog
+This class is used to interact with the task-log API
+
+**Kind**: global class  
 <a name="Task"></a>
 
 ## Task
@@ -839,6 +1088,36 @@ Unshare task
 | taskId | <code>string</code> | The task ID |
 | orgId | <code>string</code> | The org ID |
 
+<a name="Taxonomy"></a>
+
+## Taxonomy
+This class is used to interact with the Taxonomy API
+
+**Kind**: global class  
+<a name="Timeline"></a>
+
+## Timeline
+This class is used to interact with the timeline API
+
+**Kind**: global class  
+<a name="TOTP"></a>
+
+## TOTP
+This class is used to interact with the TOTP API
+
+**Kind**: global class  
+<a name="Ttp"></a>
+
+## Ttp
+This class is used to interact with the ttp API
+
+**Kind**: global class  
+<a name="User"></a>
+
+## User
+This class is used to interact with the User API
+
+**Kind**: global class  
 <a name="query"></a>
 
 ## query(query)
