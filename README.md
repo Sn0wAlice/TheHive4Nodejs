@@ -1091,6 +1091,184 @@ This class is used to interact with the comment API
 This class is used to interact with the Cortex API
 
 **Kind**: global class  
+
+* [Cortex](#Cortex)
+    * [.createAction(responderId, cordexId, objectType, objectId, parameters, tlp)](#Cortex+createAction) ⇒ <code>Promise</code>
+    * [.getActionsByEntity(entityType, entityId)](#Cortex+getActionsByEntity)
+    * [.listAnalyzers()](#Cortex+listAnalyzers) ⇒ <code>Promise</code>
+    * [.listAnalyzersByType(type)](#Cortex+listAnalyzersByType) ⇒ <code>Promise</code>
+    * [.getAnalyzerById(id)](#Cortex+getAnalyzerById) ⇒ <code>Promise</code>
+    * [.createJob(analyzerId, cordexId, artifactId, parameters)](#Cortex+createJob) ⇒ <code>Promise</code>
+    * [.getJobById(id)](#Cortex+getJobById) ⇒ <code>Promise</code>
+    * [.getAnalyzeTemplateContent(analyzerId)](#Cortex+getAnalyzeTemplateContent) ⇒ <code>Promise</code>
+    * [.importAnalyzerTemplates(templates)](#Cortex+importAnalyzerTemplates) ⇒ <code>Promise</code>
+    * [.createAnalyzerTemplate(analyzerId, content)](#Cortex+createAnalyzerTemplate) ⇒ <code>Promise</code>
+    * [.deleteAnalyzerTemplate(analyzerTemplateId)](#Cortex+deleteAnalyzerTemplate) ⇒ <code>Promise</code>
+    * [.updateAnalyzerTemplate(analyzerTemplateId, content)](#Cortex+updateAnalyzerTemplate) ⇒ <code>Promise</code>
+    * [.listResponders(type, id)](#Cortex+listResponders) ⇒ <code>Promise</code>
+
+<a name="Cortex+createAction"></a>
+
+### cortex.createAction(responderId, cordexId, objectType, objectId, parameters, tlp) ⇒ <code>Promise</code>
+Create an action
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| responderId | <code>string</code> | The responder id of the action |
+| cordexId | <code>string</code> | The cortex id of the action |
+| objectType | <code>string</code> | The object type of the action |
+| objectId | <code>string</code> | The objectId type of the action |
+| parameters | <code>string</code> | The parameters of the action |
+| tlp | <code>string</code> | The tlp of the action |
+
+<a name="Cortex+getActionsByEntity"></a>
+
+### cortex.getActionsByEntity(entityType, entityId)
+Get actions by entity
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| entityType | <code>string</code> | The entity type of the action |
+| entityId | <code>string</code> | The entity id of the action |
+
+<a name="Cortex+listAnalyzers"></a>
+
+### cortex.listAnalyzers() ⇒ <code>Promise</code>
+List analyzers
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+<a name="Cortex+listAnalyzersByType"></a>
+
+### cortex.listAnalyzersByType(type) ⇒ <code>Promise</code>
+List analyzers by type
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>string</code> | The type of the analyzer |
+
+<a name="Cortex+getAnalyzerById"></a>
+
+### cortex.getAnalyzerById(id) ⇒ <code>Promise</code>
+Get analyzer by id
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the analyzer |
+
+<a name="Cortex+createJob"></a>
+
+### cortex.createJob(analyzerId, cordexId, artifactId, parameters) ⇒ <code>Promise</code>
+Create a cortex job
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| analyzerId | <code>string</code> | The analyzer id of the job |
+| cordexId | <code>string</code> | The cortex id of the job |
+| artifactId | <code>string</code> | The artifact id of the job |
+| parameters | <code>string</code> | The parameters of the job |
+
+<a name="Cortex+getJobById"></a>
+
+### cortex.getJobById(id) ⇒ <code>Promise</code>
+Get cortex job by id
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the job |
+
+<a name="Cortex+getAnalyzeTemplateContent"></a>
+
+### cortex.getAnalyzeTemplateContent(analyzerId) ⇒ <code>Promise</code>
+Get analyze template content
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| analyzerId | <code>string</code> | The analyzer id of the template |
+
+<a name="Cortex+importAnalyzerTemplates"></a>
+
+### cortex.importAnalyzerTemplates(templates) ⇒ <code>Promise</code>
+Import analyzer templates
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| templates | <code>string</code> | The templates of the analyzer |
+
+<a name="Cortex+createAnalyzerTemplate"></a>
+
+### cortex.createAnalyzerTemplate(analyzerId, content) ⇒ <code>Promise</code>
+Create analyzer template
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| analyzerId | <code>string</code> | The analyzer id of the template |
+| content | <code>string</code> | The content of the template |
+
+<a name="Cortex+deleteAnalyzerTemplate"></a>
+
+### cortex.deleteAnalyzerTemplate(analyzerTemplateId) ⇒ <code>Promise</code>
+Delete analyzer template
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| analyzerTemplateId | <code>string</code> | The analyzer id of the template |
+
+<a name="Cortex+updateAnalyzerTemplate"></a>
+
+### cortex.updateAnalyzerTemplate(analyzerTemplateId, content) ⇒ <code>Promise</code>
+Update analyser template
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| analyzerTemplateId | <code>string</code> | The analyzer id of the template |
+| content | <code>string</code> | The content of the template |
+
+<a name="Cortex+listResponders"></a>
+
+### cortex.listResponders(type, id) ⇒ <code>Promise</code>
+List responders
+
+**Kind**: instance method of [<code>Cortex</code>](#Cortex)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>string</code> | The type of the responder |
+| id | <code>string</code> | The id of the responder |
+
 <a name="Customfield"></a>
 
 ## Customfield
