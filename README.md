@@ -1218,6 +1218,97 @@ Decribe all models
 This class is used to interact with the function API
 
 **Kind**: global class  
+
+* [Function](#Function)
+    * [.createFunction(name, mode, definition, description, config)](#Function+createFunction)
+    * [.invokeFunction(id)](#Function+invokeFunction) ⇒ <code>Promise</code>
+    * [.getFunction(id)](#Function+getFunction) ⇒ <code>Promise</code>
+    * [.deleteFunction(id)](#Function+deleteFunction) ⇒ <code>Promise</code>
+    * [.updateFunction(id, mode, definition, description, config)](#Function+updateFunction) ⇒ <code>Promise</code>
+    * [.testFunction(name, definition, config, input)](#Function+testFunction) ⇒ <code>Promise</code>
+
+<a name="Function+createFunction"></a>
+
+### function.createFunction(name, mode, definition, description, config)
+Create function
+
+**Kind**: instance method of [<code>Function</code>](#Function)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name of the function |
+| mode | <code>string</code> | The mode of the function |
+| definition | <code>string</code> | The definition of the function |
+| description | <code>string</code> | The description of the function |
+| config | <code>string</code> | The config of the function |
+
+<a name="Function+invokeFunction"></a>
+
+### function.invokeFunction(id) ⇒ <code>Promise</code>
+Invoke function
+
+**Kind**: instance method of [<code>Function</code>](#Function)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the function |
+
+<a name="Function+getFunction"></a>
+
+### function.getFunction(id) ⇒ <code>Promise</code>
+Get function
+
+**Kind**: instance method of [<code>Function</code>](#Function)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the function |
+
+<a name="Function+deleteFunction"></a>
+
+### function.deleteFunction(id) ⇒ <code>Promise</code>
+Delete function
+
+**Kind**: instance method of [<code>Function</code>](#Function)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the function |
+
+<a name="Function+updateFunction"></a>
+
+### function.updateFunction(id, mode, definition, description, config) ⇒ <code>Promise</code>
+Update function
+
+**Kind**: instance method of [<code>Function</code>](#Function)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | The id of the function |
+| mode | <code>string</code> | The mode of the function |
+| definition | <code>string</code> | The definition of the function |
+| description | <code>string</code> | The description of the function |
+| config | <code>string</code> | The config of the function |
+
+<a name="Function+testFunction"></a>
+
+### function.testFunction(name, definition, config, input) ⇒ <code>Promise</code>
+Test function
+
+**Kind**: instance method of [<code>Function</code>](#Function)  
+**Returns**: <code>Promise</code> - The response of the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name of the function |
+| definition | <code>string</code> | The definition of the function |
+| config | <code>string</code> | The config of the function |
+| input | <code>string</code> | The input of the function |
+
 <a name="License"></a>
 
 ## License
