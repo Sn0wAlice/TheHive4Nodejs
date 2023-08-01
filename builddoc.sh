@@ -1,13 +1,10 @@
 # Use of https://github.com/jsdoc2md/jsdoc-to-markdown
 
+rm -rf docs
+mkdir docs
 mkdir ./tmp
-jsdoc2md --files mods/*.js > ./tmp/mods.md
 
-# Read the base README
-cat ./utils/README.md > ./tmp/README.md
-
-# Replace "__DOC__" with the generated documentation
-node builddoc.js
+jsdoc2md --files mods/*.js > ./docs/class.md
 
 # Remove the tmp folder
 rm -rf ./tmp
