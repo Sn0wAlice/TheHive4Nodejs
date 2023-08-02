@@ -14,6 +14,8 @@ TheHive is a scalable security incident response platform, closely integrated wi
 2. nouveau site web: [https://www.strangebee.com/](https://www.strangebee.com/)
 3. blog: [https://blog.strangebee.com/](https://blog.strangebee.com/)
 
+> Need 4 core & 8go ram for a good process
+
 ## Known issues
 - documentation type does not match
 - some functions can show error without explication
@@ -32,3 +34,12 @@ i will patch all of these as soon a possible
 > good luck 🥹
 
 - Class [Click here to see the class doc](./docs/class.md)
+
+# Utils
+
+> don't forget to execute `npm i thehive4nodejs` before using a utils script
+
+### Deploy a new thehive: 
+Exemple script can be find in: `./examples/deploy-thehive-*.js`
+
+> yep you can deploy a thehive instance with a single nodejs simple script :)
