@@ -39,7 +39,11 @@ i will patch all of these as soon a possible
 
 > don't forget to execute `npm i thehive4nodejs` before using a utils script
 
-### Deploy a new thehive: 
-Exemple script can be find in: `./examples/deploy-thehive-*.js`
+## Deploy a new thehive: 
 
 > yep you can deploy a thehive instance with a single nodejs simple script :)
+
+Example script can be find in: `./examples/deploy-thehive-*.js`
+
+### deploy-thehive.js
+This script will just install / update a docker version of thehive instance.
