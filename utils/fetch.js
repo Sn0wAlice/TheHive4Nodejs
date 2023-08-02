@@ -32,7 +32,7 @@ class fetchPrivate {
             return null
         }
     }
-    async post(endpoint, body) {
+    async post(endpoint, body, responseHeader = false) {
         try {
             const req = await f(`${this.thehivehostname}${endpoint}`, {
                 method: "POST",
@@ -42,7 +42,14 @@ class fetchPrivate {
                 },
                 body: JSON.stringify(body)
             })
-            return await req.json()
+            if(responseHeader) {
+                return {
+                    body: await req.json(),
+                    headers: req.headers
+                }
+            } else {
+                return await req.json()
+            }
         } catch (error) {
             return null       
         }
