@@ -1,7 +1,7 @@
 {
   "name": "thehive4nodejs",
-  "version": "1.1.0",
-  "description": "Nodejs module to interact with your TheHive5 instance",
+  "version": "1.1.1",
+  "description": "Nodejs module to interact with your TheHive5 instance. You can also manage all your instances with this module (create, delete, update, ...)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0"
@@ -11,7 +11,15 @@
     "url": "https://github.com/Sn0wAlice/TheHive4Nodejs.git"
   },
   "keywords": [
-    "thehive5"
+    "thehive5",
+    "security",
+    "platform",
+    "automatisation",
+    "incident",
+    "response",
+    "case",
+    "task",
+    "alert"
   ],
   "author": "Sn0wAlice",
   "license": "GPL-3.0-or-later",
