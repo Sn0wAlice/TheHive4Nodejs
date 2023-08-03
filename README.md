@@ -34,6 +34,7 @@ i will patch all of these as soon a possible
 > good luck 🥹
 
 - Class [Click here to see the class doc](./docs/class.md)
+- Custom [Click here to see the custom doc](./docs/custom.md)
 
 # Utils
 
