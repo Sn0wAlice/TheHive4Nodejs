@@ -52,7 +52,7 @@ const knowledge = class {
             let pages = exploreFilesSync(category[i])
             for(let j = 0; j < pages.length; j++) {
                 let content = fs.readFileSync(pages[j], 'utf8')
-                await page.createPage(pages[j].split('/')[pages[j].split('/').length - 1].split('.')[0], content, null, pages[j].split('/')[pages[j].split('/').length - 2])
+                await page.createPage(getName(pages[j]), content, null, pages[j].split('/')[pages[j].split('/').length - 2])
             }
         }
     }
@@ -66,6 +66,12 @@ const knowledge = class {
     }
 }
 
+
+function getName(path) {
+    let tmp = path.split('/')[path.split('/').length - 1].split('.')
+    tmp.pop()
+    return tmp.join('.')
+}
 
 function exploreDirSync(path) {
     let files = fs.readdirSync(path)

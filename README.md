@@ -36,6 +36,15 @@ i will patch all of these as soon a possible
 - Class [Click here to see the class doc](./docs/class.md)
 - Custom [Click here to see the custom doc](./docs/custom.md)
 
+### Tips
+Is you use an autosigned ssl, please create your instance like this: 
+```
+const myThehive = new thehive4nodejs(
+    "http://127.0.0.1", "9000", "", true
+)
+```
+the last `true` enable the ssl reject unauthorized for nodejs fetch :)
+
 # Utils
 
 > don't forget to execute `npm i thehive4nodejs` before using a utils script

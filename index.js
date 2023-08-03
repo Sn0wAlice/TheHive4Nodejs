@@ -11,10 +11,14 @@ let thehive4nodejs = class {
     thehiveport = ""
     thehiveapikey = ""
 
-    constructor(thehivehostname = "http://127.0.0.1", thehiveport = "9000", thehiveapikey = "") {
+    constructor(thehivehostname = "http://127.0.0.1", thehiveport = "9000", thehiveapikey = "", autosigned = false) {
         this.thehivehostname = thehivehostname
         this.thehiveport = thehiveport
         this.thehiveapikey = thehiveapikey
+
+        if(autosigned) {
+            process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
+        }
 
         fetchInstance.setConfig(thehivehostname, thehiveport, thehiveapikey)
     }
@@ -31,9 +35,9 @@ let thehive4nodejs = class {
 }
 
 // Load All Modules
-const modules = readDir('./mods')
+const modules = readDir(`${__dirname}/mods`)
 for(let module of modules) {
-    const tmp = require('./mods/' + module)
+    const tmp = require(`${__dirname}/mods/${module}`)
     // for each key in the object, inject it into the class prototype
     for(let key in tmp) {
         thehive4nodejs.prototype[key] = tmp[key]
@@ -41,9 +45,9 @@ for(let module of modules) {
 }
 
 // Load Custom Scripts
-const scripts = readDir('./scripts')
+const scripts = readDir(`${__dirname}/scripts`)
 for(let script of scripts) {
-    const tmp = require('./scripts/' + script)
+    const tmp = require(`${__dirname}/scripts/${script}`)
     // for each key in the object, inject it into the class prototype
     for(let key in tmp) {
         customScripts.prototype[key] = tmp[key]
